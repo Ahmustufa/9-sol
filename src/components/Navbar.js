@@ -73,7 +73,7 @@ function ResponsiveAppBar() {
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <div style={{ paddingRight: 10 }}>{page.icon}</div>
                   <Link
-                    className="text-6xl font-bold transition duration-150 border-b-2 border-transparent hover:border-magenta"
+                    className="text-xl font-bold transition duration-150 border-b-2 border-transparent hover:border-magenta"
                     href={page.to}
                     textAlign="center"
                     color={page.to === router.route ? "#aa076b" : "black"}
