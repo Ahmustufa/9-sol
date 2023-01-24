@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import LinearButton from "./buttons/LinearButton";
 import "@fontsource/poppins";
+import Image from "next/image";
 const Header = () => {
   return (
     <Grid
@@ -10,7 +11,7 @@ const Header = () => {
       py={2}
       sx={{
         display: {
-          xl: "block",
+          xl: "flex",
           md: "none",
           lg: "flex",
           sm: "none",
@@ -21,7 +22,9 @@ const Header = () => {
       color="black"
     >
       <Grid item xs={6}>
-        <div className="logo"></div>
+        <div className="flex justify-center">
+          <Image src={require('/public/images/logo/9Sol.png')} width={200} height={200}/>
+        </div>
       </Grid>
       <Grid item xs={2} className="flex justify-end items-center">
         <a>+1-332-282-5382</a>
