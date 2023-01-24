@@ -1,22 +1,11 @@
-import { Grid, Stack } from "@mui/material";
 import Head from "next/head";
-import { Typewriter } from "react-simple-typewriter";
-import Text from "@/components/Typography/Text";
-import ContactForm from "@/components/form/ContactForm";
+
 import RatingBar from "@/components/Bar/RatingBar";
-import { BsCheckCircleFill } from "react-icons/bs";
-import BlackButton from "@/components/buttons/BlackButton";
-import Image from "next/image";
+import Pricing from '../components/services/Pricing'
 import TopRatedProfessionals from "@/components/carousel/TopRatedProfessionals";
 import WebSolutions from "@/components/WebSolutions/WebSolutions";
+import Intro from "@/components/main/Intro";
 const Home = () => {
-  const handleType = (count) => {
-    console.log(count);
-  };
-
-  const handleDone = () => {
-    console.log(`Done after 5 loops!`);
-  };
   return (
     <>
       <Head>
@@ -25,205 +14,17 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid container p={3}>
-        <Grid item xs={8}>
-          <Stack spacing={2} display="flex">
-            <Grid container>
-              <Grid
-                item
-                xs={2}
-                sx={{
-                  display: {
-                    md: "none",
-                    xs: "none",
-                    sm: "none",
-                    lg: "flex",
-                    xl: "flex",
-                  },
-                }}
-              ></Grid>
-              <Grid item xs={10} sm={10} xl={8} lg={8} md={10}>
-                <Text fontSize={40} fontWeight="bold" className="break-words">
-                  Go Digital With Leading <br />
-                  <span style={{ color: "#aa076b" }}>
-                    <Typewriter
-                      words={["Logo", "Web", "Mobile"]}
-                      loop={2}
-                      cursor
-                      cursorStyle="|"
-                      typeSpeed={80}
-                      cursorColor="#aa076b"
-                      deleteSpeed={50}
-                      delaySpeed={1000}
-                      onLoopDone={handleDone}
-                      onType={handleType}
-                    />
-                  </span>
-                  Design Company
-                </Text>
-              </Grid>
-            </Grid>
-
-            <Grid container>
-              <Grid
-                item
-                xs={2}
-                sx={{
-                  display: {
-                    md: "none",
-                    xs: "none",
-                    sm: "none",
-                    lg: "flex",
-                    xl: "flex",
-                  },
-                }}
-              ></Grid>
-              <Grid item xs={8} className="flex justify-center">
-                <Text fontSize={18} className="break-words">
-                  Making a mark in today's online world is a crucial element of
-                  marketing. Since the world has started to enjoy better results
-                  of digital marketing methods, traditional marketing methods
-                  are quickly losing popularity.
-                </Text>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={2}
-                sx={{
-                  display: {
-                    md: "none",
-                    xs: "none",
-                    sm: "none",
-                    lg: "flex",
-                    xl: "flex",
-                  },
-                }}
-              ></Grid>
-              <Grid item xs={6} className="flex flex-col">
-                <Stack spacing={1}>
-                  <div className="flex items-center ">
-                    <span className="pr-2">
-                      <BsCheckCircleFill
-                        style={{
-                          fill: "#FFD700",
-                          fontSize: "20px",
-                        }}
-                      />
-                    </span>
-                    <Text>Sleek Design</Text>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="pr-2">
-                      <BsCheckCircleFill
-                        style={{
-                          fill: "#FFD700",
-                          fontSize: "20px",
-                        }}
-                      />
-                    </span>
-                    <Text>Fastest Turnaround time</Text>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="pr-2">
-                      <BsCheckCircleFill
-                        style={{
-                          fill: "#FFD700",
-                          fontSize: "20px",
-                        }}
-                      />
-                    </span>
-                    <Text>SEO Optimized</Text>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="pr-2">
-                      <BsCheckCircleFill
-                        style={{
-                          fill: "#FFD700",
-                          fontSize: "20px",
-                        }}
-                      />
-                    </span>
-                    <Text>Fully Customized</Text>
-                  </div>
-                  <div className="pt-4">
-                    <BlackButton>Get Your Web Design</BlackButton>
-                  </div>
-                </Stack>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid
-                item
-                xs={12}
-                className=""
-                sx={{
-                  justifyContent: "space-evenly",
-                  alignItems: "center",
-                  display: {
-                    lg: "flex",
-                    xl: "flex",
-                    md: "none",
-                    xs: "none",
-                    sm: "none",
-                  },
-                }}
-              >
-                <div>
-                  <Image
-                    src={"/images/certifications/topRated2.png"}
-                    width={100}
-                    height={200}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={"/images/certifications/topRated3.png"}
-                    width={100}
-                    height={100}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={"/images/certifications/topRated1.png"}
-                    width={100}
-                    height={200}
-                  />
-                </div>
-              </Grid>
-            </Grid>
-          </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sx={{
-            justifyContent: "center",
-            display: {
-              xl: "flex",
-              lg: "flex",
-              md: "flex",
-              sm: "none",
-              xs: "none",
-            },
-          }}
-        >
-          <ContactForm />
-        </Grid>
-      </Grid>
-
+      <Intro />
       <RatingBar />
-
       <WebSolutions />
 
-      <div style={{ backgroundColor: "#eeeeee" }}>
-        <TopRatedProfessionals
-          title="Get top-rated and recognized professionals onboard!"
-          slidesToShow={4}
-          slidesToScroll={1}
-        />
-      </div>
+      <TopRatedProfessionals
+        backgroundColor="#eeeeee"
+        title="Get top-rated and recognized professionals onboard!"
+        slidesToShow={4}
+        slidesToScroll={1}
+      />
+      <Pricing/>
     </>
   );
 };
