@@ -18,20 +18,20 @@ const Header = () => {
           xs: "none",
         },
       }}
-      bgcolor="#eeeeee"
+      bgcolor="#232A38"
       color="black"
     >
       <Grid item xs={6}>
         <div className="flex justify-center">
-          <Image src={require('/public/images/logo/9Sol.png')} width={200} height={200}/>
+          <Image src={require('/public/images/logo/Dark-9Sol.png')} width={160} height={100}/>
         </div>
       </Grid>
       <Grid item xs={2} className="flex justify-end items-center">
-        <a>+1-332-282-5382</a>
+        <a className="text-white">+1-332-282-5382</a>
       </Grid>
-      <Grid item xs={1} className="flex justify-end items-center">
-        <Typography>Live Chat</Typography>
-      </Grid>
+      {/* <Grid item xs={1} className="flex justify-end items-center">
+        <Typography className="text-white" >Live Chat</Typography>
+      </Grid> */}
       <Grid item xs={2} className="flex justify-start">
         <LinearButton>Get 50% Discount</LinearButton>
       </Grid>

@@ -1,10 +1,13 @@
-import React from 'react'
-const Footer=()=> {
+import React from "react";
+import { Grid } from "@mui/material";
+const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
-  )
-}
+    <Grid container>
+      <Grid item xs={12} display="flex" justifyContent="center">
+        asjdhasjd
+      </Grid>
+    </Grid>
+  );
+};
 
-export default Footer
+export default Footer;

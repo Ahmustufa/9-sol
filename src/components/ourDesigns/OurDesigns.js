@@ -132,7 +132,7 @@ const OurDesigns = (props) => {
       <Modal
         onOpen={modalState.visible}
         onClose={closeModal}
-        width="max-content"
+        // width="max-content"
         // footer={null}
       >
         <Image alt="img" src={modalState.imgSrc} className="img-fluid" />
