@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Modal from '@mui/material/Modal';
+import Modal from "@mui/material/Modal";
 import Image from "next/image";
-
+import { Box, Dialog } from "@mui/material";
+import { AiOutlineClose } from "react-icons/ai";
 const StyledCard = styled.div`
   height: 300px;
   position: relative;
@@ -57,8 +58,8 @@ const StyledCard = styled.div`
     font-weight: 600;
     z-index: 999;
     &:hover {
-      background-color: #ed3c69;
-      border: 1px solid #ed3c69;
+      background-color: #aa076b;
+      border: 1px solid #aa076b;
     }
   }
 
@@ -102,25 +103,36 @@ const PreviewCard = ({ image, link }) => {
   };
   return (
     <>
-      <Modal open={modalVisible}  onClose={handleModalClose} width="80%" footer={null}>
-     
-          <img alt="img" src={image} width="100%" />
-     
+      <Dialog scroll="paper" open={modalVisible} onClose={handleModalClose}>
+        <div style={{ backgroundColor: "#aa076b" }}>
+          <AiOutlineClose
+            style={{ marginLeft: "auto" }}
+            onClick={handleModalClose}
+            color="white"
+            fontSize={22}
+          />
+        </div>
+        <Box display="flex" justifyContent="center" alignItems="center">
+          <img alt="img" src={image} />
+        </Box>
+        <div style={{ backgroundColor: "#aa076b", padding: 10 }}>
+        
+        </div>
         {/* <Image src={image} style={{height:'100%',width:'100%'}}width="100%" height="100%" /> */}
-      </Modal>
+      </Dialog>
       <StyledCard className="" imageHeight={imageHeight}>
         <button className="preview-btn" onClick={handleModalOpen}>
           Preview
         </button>
         <div class="fixed-container screen">
           {/* <img onLoad={onImgLoad} src={image} /> */}
-            <Image
-              onLoad={onImgLoad}
-              src={image}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="top"
-            />
+          <Image
+            onLoad={onImgLoad}
+            src={image}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+          />
         </div>
       </StyledCard>
     </>

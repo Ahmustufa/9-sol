@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import PreviewCard from "../cards/previewCard";
-import { Grid, Modal } from "@mui/material";
+import PreviewCard from "../cards/PreviewCard";
+import { Box, Grid, Modal } from "@mui/material";
 import Heading from "../Title/Heading";
-import MultiSwitchWrapper from "../inputs/multiSwitchWrapper";
+import MultiSwitchWrapper from "../inputs/MultiSwitchWrapper";
 import { useRouter } from "next/router";
 import { Bounce, Slide, Fade, Zoom } from "react-awesome-reveal";
 import { SwipeButton } from "../buttons";
 import Image from "next/image";
-import {options, designItems, allItems} from '../../utils/ourDesignItems'
+import { options, designItems, allItems } from "../../utils/ourDesignItems";
 
 const StyledSection = styled.section`
   text-align: center;
@@ -129,13 +129,11 @@ const OurDesigns = (props) => {
   const router = useRouter();
   return (
     <>
-      <Modal
-        onOpen={modalState.visible}
-        onClose={closeModal}
-        // width="max-content"
-        // footer={null}
-      >
-        <Image alt="img" src={modalState.imgSrc} className="img-fluid" />
+      <Modal onOpen={modalState.visible} onClose={closeModal}>
+        <Box>
+          sadsa
+          {/* <Image alt="img" src={modalState.imgSrc}  /> */}
+          </Box>
       </Modal>
 
       <StyledSection className="container-fluid">
@@ -433,4 +431,3 @@ OurDesigns.defaultProps = {
 };
 
 export default OurDesigns;
-

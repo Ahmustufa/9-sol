@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       </Grid>
       <Grid item xs={2} className="flex justify-end items-center">
-        <a className="text-white">+1-332-282-5382</a>
+        <a className="text-white" href="tel:+13322825382">+1-332-282-5382</a>
       </Grid>
       {/* <Grid item xs={1} className="flex justify-end items-center">
         <Typography className="text-white" >Live Chat</Typography>

@@ -21,3 +21,4 @@ export const topRated2 = "./images/certifications/topRated2.png";
 export const topRated3 = "./images/certifications/topRated3.png";
 export const topRated4 = "./images/certifications/topRated4.svg";
 export const topRated5 = "./images/certifications/topRated5.svg";
+export const paymentPicture = "../images/paymentlogosvertical.png";
