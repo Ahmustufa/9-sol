@@ -8,7 +8,7 @@ function App() {
     {
       title: "Starter",
       subtitle: "Best option for personal use  & for your next project.",
-      price: 29,
+      price: 129,
       items: [
         "Individual configuration",
         "No setup, or hidden fees",
@@ -20,7 +20,7 @@ function App() {
     {
       title: "Company",
       subtitle: "Relevant for multiple users, extended & premium support.",
-      price: 99,
+      price: 399,
       items: [
         "Individual configuration",
         "No setup, or hidden fees",
@@ -32,7 +32,7 @@ function App() {
     {
       title: "Enterprise",
       subtitle: "Best for large scale uses and extended redistribution rights.",
-      price: 199,
+      price: 1199,
       items: [
         "Individual configuration",
         "No setup, or hidden fees",
@@ -113,8 +113,7 @@ background-color: transparent;
   &:hover {
     box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
     transform-origin: right top;
-    transform: perspective(1000px) rotateX(10deg);
-    rotateY(-10deg) rotateZ(2deg);
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
   box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
   transform-origin: center top;
   transform: perspective(1000px) rotateX(10deg);

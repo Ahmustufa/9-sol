@@ -1,9 +1,9 @@
-import '@/styles/globals.css'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import { useRouter } from 'next/router'
+import "@/styles/globals.css";
+import Head from "next/head";
+import Layout from "../components/Layout";
+import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
 
         <title>{pageProps?.metaData?.title}</title>
 
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.svg" />
         <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -24,17 +24,26 @@ export default function App({ Component, pageProps }) {
         <meta name="locale" content="en_US" />
         <meta name="og:locale" content="en_US" />
         <meta property="og:image" content={pageProps?.metaData?.image} />
-        <meta property="og:image:secure_url" content={pageProps?.metaData?.image} />
+        <meta
+          property="og:image:secure_url"
+          content={pageProps?.metaData?.image}
+        />
         <meta name="og:image" content={pageProps?.metaData?.image} />
         <meta name="og:type" content="Mobile and Web application development" />
         <meta name="url" content={`https://9solutions.co${router.asPath}`} />
         <meta name="og:url" content={`https://9solutions.co${router.asPath}`} />
         <meta name="og:title" content={pageProps?.metaData?.title} />
         <meta name="description" content={pageProps?.metaData?.description} />
-        <meta name="og:description" content={pageProps?.metaData?.description} />
+        <meta
+          name="og:description"
+          content={pageProps?.metaData?.description}
+        />
         <meta name="keywords" content={pageProps?.metaData?.keywords} />
         <meta name="og:site_name" content="9-solutions Technology" />
-        <meta name="article:published_time" content={pageProps?.metaData?.publishTime} />
+        <meta
+          name="article:published_time"
+          content={pageProps?.metaData?.publishTime}
+        />
 
         {/* <script async src="build/react.js" /> */}
         <script async src="https://www.google.com/recaptcha/api.js" />
@@ -90,9 +99,9 @@ export default function App({ Component, pageProps }) {
           />
         </noscript>
       </Head>
-  <Layout>
-    <Component {...pageProps} />
-  </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
-  )
+  );
 }
