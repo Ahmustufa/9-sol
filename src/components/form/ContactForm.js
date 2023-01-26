@@ -1,8 +1,50 @@
-import { Box, Stack, TextField } from "@mui/material";
-import React from "react";
+import { Alert, Box, Stack, TextField } from "@mui/material";
+import React, { useState } from "react";
 import Text from "../Typography/Text";
 import styled from "styled-components";
+import BlackButton from "../buttons/BlackButton";
+
 const ContactForm = () => {
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setLoading(false);
+          console.log("Response succeeded > ", res);
+          // setData(initialState);
+          // <Alert severity="success">This is a success message!</Alert>
+        } else {
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        console.log("err", err);
+        setLoading(false);
+      });
+  };
+
   return (
     <Div
       component="form"
@@ -14,29 +56,37 @@ const ContactForm = () => {
           Chat with us to Avail <br /> 50% off
         </Text>
         <Input
+          name="fullName"
           id="outlined-basic"
+          onChange={handleChange}
           label="Name"
           required
           variant="outlined"
           placeholder="Enter Your name"
         />
         <Input
+          name="email"
           id="outlined-basic"
           label="Email"
+          onChange={handleChange}
           required
           variant="outlined"
           type="email"
           placeholder="Enter Your email"
         />
         <Input
+          name="phone"
           id="outlined-basic"
           label="Phone Number"
+          onChange={handleChange}
           required
           variant="outlined"
           type="tel"
           placeholder="Enter Your phone number"
         />
         <Input
+          name="message"
+          onChange={handleChange}
           id="standard-multiline-static"
           multiline
           required
@@ -44,6 +94,9 @@ const ContactForm = () => {
           rows={4}
           variant="outlined"
         />
+        {/* <div className="flex justify-center items-center w-full"> */}
+        <BlackButton onClick={handleSubmit}>Submit</BlackButton>
+        {/* </div> */}
       </Stack>
     </Div>
   );
@@ -60,5 +113,5 @@ const Input = styled(TextField)`
 `;
 
 const Div = styled(Box)`
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-`
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
