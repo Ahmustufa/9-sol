@@ -9,11 +9,11 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Intro = () => {
   const handleType = (count) => {
-    console.log(count);
+    // console.log(count);
   };
 
   const handleDone = () => {
-    console.log(`Done after 5 loops!`);
+    // console.log(`Done after 5 loops!`);
   };
   return (
     <Grid container p={3}>
