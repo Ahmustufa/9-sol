@@ -36,7 +36,12 @@ function ResponsiveAppBar() {
   const router = useRouter();
   console.log(router.route);
   return (
-    <AppBar position="sticky" className="bg-white" elevation={0}>
+    <AppBar
+      position="sticky"
+      // className="bg-white"
+      style={{ backgroundColor: "white" }}
+      elevation={0}
+    >
       <Header />
       <Container maxWidth="xl">
         <Toolbar disableGutters>

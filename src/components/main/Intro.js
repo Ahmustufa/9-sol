@@ -6,8 +6,10 @@ import Image from "next/image";
 import BlackButton from "@/components/buttons/BlackButton";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Typewriter } from "react-simple-typewriter";
-
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
 const Intro = () => {
+  
   const handleType = (count) => {
     // console.log(count);
   };

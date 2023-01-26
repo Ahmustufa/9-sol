@@ -7,6 +7,7 @@ const RatingBar = () => {
   return (
     <Grid
       container
+      my={5}
       sx={{display: {md: "none", xs: "none", sm: "none", lg: "flex", xl: "flex"}}}
       className="text-white p-5 font-bold bg-gradient-to-r from-darkMagenta via-magenta to-magenta focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80"
     >

@@ -43,7 +43,7 @@ function App() {
     },
   ];
   return (
-    <ParentGrid container mb={10} pb={10}>
+    <ParentGrid container mb={10} pb={10} >
       <Grid item xs={12}>
         <Heading
           title={
@@ -61,7 +61,7 @@ function App() {
         >
           {data.map((val, index) => {
             return (
-              <Cards item xs={2.8} px={7}>
+              <Cards item xs={2.5} px={7} className="rounded-lg">
                 <Stack spacing={2} mt={3} mb={1}>
                   <Typography variant="h4" textAlign="center">
                     {val.title}
@@ -107,7 +107,7 @@ function App() {
 }
 export default App;
 const Cards = styled(Grid)`
-background-color: transparent;
+ background: rgba(255, 255, 255, 0.8);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: .5s ease;
   &:hover {

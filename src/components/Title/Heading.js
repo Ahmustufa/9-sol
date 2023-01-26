@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Grid } from "@mui/material";
 const StyledDiv = styled.div`
+margin: 50px 0px;
   h1 {
     text-align: center;
     font-weight: bold;

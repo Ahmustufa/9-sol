@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Text from "../Typography/Text";
 import styled from "styled-components";
 import BlackButton from "../buttons/BlackButton";
-
+import Snackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
 const ContactForm = () => {
   const [data, setData] = useState({
     fullName: "",
@@ -11,9 +12,19 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
-
-  const [loading, setLoading] = useState(false);
-
+  const [loading, setLoading] = React.useState(false);
+  const [toast, setToast] = React.useState({
+    open: false,
+  });
+  const SlideTransition = (props) => {
+    return <Slide {...props} direction="up" />;
+  };
+  const handleClose = () => {
+    setState({
+      ...state,
+      open: false,
+    });
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
@@ -46,59 +57,74 @@ const ContactForm = () => {
   };
 
   return (
-    <Div
-      component="form"
-      autoComplete="off"
-      className="p-6 border-gray-dark rounded-xl"
-    >
-      <Stack spacing={3}>
-        <Text fontWeight="bold" fontSize={32}>
-          Chat with us to Avail <br /> 50% off
-        </Text>
-        <Input
-          name="fullName"
-          id="outlined-basic"
-          onChange={handleChange}
-          label="Name"
-          required
-          variant="outlined"
-          placeholder="Enter Your name"
-        />
-        <Input
-          name="email"
-          id="outlined-basic"
-          label="Email"
-          onChange={handleChange}
-          required
-          variant="outlined"
-          type="email"
-          placeholder="Enter Your email"
-        />
-        <Input
-          name="phone"
-          id="outlined-basic"
-          label="Phone Number"
-          onChange={handleChange}
-          required
-          variant="outlined"
-          type="tel"
-          placeholder="Enter Your phone number"
-        />
-        <Input
-          name="message"
-          onChange={handleChange}
-          id="standard-multiline-static"
-          multiline
-          required
-          placeholder="Talk about your Project"
-          rows={4}
-          variant="outlined"
-        />
-        {/* <div className="flex justify-center items-center w-full"> */}
-        <BlackButton onClick={handleSubmit}>Submit</BlackButton>
-        {/* </div> */}
-      </Stack>
-    </Div>
+    <>
+      <Snackbar
+        open={toast.open}
+        onClose={handleClose}
+        TransitionComponent={"Fade"}
+        message="Message Success"
+        key={0}
+      />
+      <Div
+        component="form"
+        autoComplete="off"
+        className="p-6 border-gray-dark rounded-xl"
+      >
+        <Stack spacing={3}>
+          <Text fontWeight="bold" fontSize={32}>
+            Chat with us to Avail <br /> 50% off
+          </Text>
+          <Input
+            name="fullName"
+            id="outlined-basic"
+            onChange={handleChange}
+            label="Name"
+            required
+            variant="outlined"
+            placeholder="Enter Your name"
+          />
+          <Input
+            name="email"
+            id="outlined-basic"
+            label="Email"
+            onChange={handleChange}
+            required
+            variant="outlined"
+            type="email"
+            placeholder="Enter Your email"
+          />
+          <Input
+            name="phone"
+            id="outlined-basic"
+            label="Phone Number"
+            onChange={handleChange}
+            required
+            variant="outlined"
+            type="tel"
+            placeholder="Enter Your phone number"
+          />
+          <Input
+            name="message"
+            onChange={handleChange}
+            id="standard-multiline-static"
+            multiline
+            required
+            placeholder="Talk about your Project"
+            rows={4}
+            variant="outlined"
+          />
+          {/* <div className="flex justify-center items-center w-full"> */}
+          <BlackButton
+            
+            onClick={handleSubmit}
+            style={{ fontWeight: "bold", fontSize: 16 }}
+          >
+            Submit
+          </BlackButton>
+          {/* </div> */}
+        </Stack>
+      </Div>
+    </>
   );
 };
 
