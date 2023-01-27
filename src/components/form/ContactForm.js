@@ -6,14 +6,11 @@ import BlackButton from "../buttons/BlackButton";
 import Snackbar from "@mui/material/Snackbar";
 import Slide from "@mui/material/Slide";
 import CircularProgress from "@mui/material/CircularProgress";
-
+import { useForm, Controller } from "react-hook-form";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 const ContactForm = () => {
-  const [data, setData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
   const [initState, setInitState] = React.useState({
     loading: false,
     success: false,
@@ -22,22 +19,20 @@ const ContactForm = () => {
   const [toast, setToast] = React.useState({
     open: false,
   });
+  const {
+    handleSubmit,
+    control,
 
-  const SlideTransition = (props) => {
-    return <Slide {...props} direction="up" />;
-  };
+    formState: { errors },
+  } = useForm();
   const handleClose = () => {
     setToast({
       ...toast,
       open: false,
     });
   };
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setData({ ...data, [name]: value });
-  };
 
-  const handleSubmit = async () => {
+  const onSubmit = async (data) => {
     setInitState({ ...initState, loading: true });
     fetch("/api/contact", {
       method: "POST",
@@ -72,7 +67,6 @@ const ContactForm = () => {
         style={{ backgroundColor: "green" }}
         autoHideDuration={6000}
         TransitionComponent={"Slide"}
-
         key={0}
       >
         {initState.success ? (
@@ -86,62 +80,114 @@ const ContactForm = () => {
           </Alert>
         ) : (
           <Alert variant="filled" severity="error">
-          We cannot process your request at this time.
+            We cannot process your request at this time.
           </Alert>
         )}
       </Snackbar>
       <Div
+        onSubmit={handleSubmit(onSubmit)}
         component="form"
         autoComplete="off"
         className="p-6 border-gray-dark rounded-xl"
       >
-        <Stack spacing={3}>
+        <Stack spacing={1}>
           <Text fontWeight="bold" fontSize={32}>
             Chat with us to Avail <br /> 50% off
           </Text>
-          <Input
-            name="fullName"
-            id="outlined-basic"
-            onChange={handleChange}
-            label="Name"
-            required
-            variant="outlined"
-            placeholder="Enter Your name"
+          {errors.fullName && (
+            <p style={{ color: "red", fontSize: 12 }}>
+              Name should be atleast 2 characters
+            </p>
+          )}
+          <Controller
+            name={"fullName"}
+            control={control}
+            rules={{
+              required: true,
+              minLength: 2,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                InputProps={{
+                  startAdornment: <AiOutlineUser position="start" size={20} />,
+                }}
+                onChange={onChange}
+                value={value}
+                label={"Name"}
+              />
+            )}
           />
-          <Input
-            name="email"
-            id="outlined-basic"
-            label="Email"
-            onChange={handleChange}
-            required
-            variant="outlined"
-            type="email"
-            placeholder="Enter Your email"
+          {errors.email && (
+            <p style={{ color: "red", fontSize: 12 }}>Invalid email address.</p>
+          )}
+          <Controller
+            name={"email"}
+            rules={{
+              required: true,
+              minLength: 5,
+              pattern:
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            }}
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                InputProps={{
+                  startAdornment: <AiOutlineMail position="start" size={20} />,
+                }}
+                onChange={onChange}
+                value={value}
+                label={"Email"}
+              />
+            )}
           />
-          <Input
+
+          {errors.phone && (
+            <p style={{ color: "red", fontSize: 12 }}>Invalid Phone number</p>
+          )}
+          <Controller
             name="phone"
-            id="outlined-basic"
-            label="Phone Number"
-            onChange={handleChange}
-            required
-            variant="outlined"
-            type="tel"
-            placeholder="Enter Your phone number"
+            control={control}
+            rules={{
+              validate: (value) =>
+                value ? isValidPhoneNumber(value) === true : false,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <PhoneField
+                value={value}
+                onChange={onChange}
+                defaultCountry="US"
+              />
+            )}
           />
-          <Input
-            name="message"
-            onChange={handleChange}
-            id="standard-multiline-static"
-            multiline
-            required
-            placeholder="Talk about your Project"
-            rows={4}
-            variant="outlined"
+          {errors.message && (
+            <p style={{ color: "red", fontSize: 12 }}>
+              Message should be atleast 2 characters
+            </p>
+          )}
+          <Controller
+            name={"message"}
+            control={control}
+            rules={{
+              required: true,
+              minLength: 2,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                id="standard-multiline-static"
+                multiline
+                required
+                placeholder="Talk about your Project"
+                onChange={onChange}
+                value={value}
+                rows={4}
+                // label={"Name"}
+              />
+            )}
           />
 
           {!initState?.loading ? (
             <BlackButton
-              onClick={handleSubmit}
+              onClick={handleSubmit(onSubmit)}
               style={{ fontWeight: "bold", fontSize: 16 }}
             >
               Submit
@@ -151,7 +197,6 @@ const ContactForm = () => {
               <CircularProgress />
             </div>
           )}
-          {/* <Button loading> Submit</Button> */}
         </Stack>
       </Div>
     </>
@@ -170,4 +215,17 @@ const Input = styled(TextField)`
 
 const Div = styled(Box)`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+
+const PhoneField = styled(PhoneInput)`
+  .PhoneInputInput {
+    /* padding: 20px; */
+    /* margin: 0px; */
+    &:focus {
+      border-style: none;
+    }
+  }
+  padding: 20px;
+  border-radius: 5px;
+  border: 1.2px solid black;
 `;
