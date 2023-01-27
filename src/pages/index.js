@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import RatingBar from "@/components/Bar/RatingBar";
 import Pricing from '../components/services/Pricing'
@@ -7,6 +8,8 @@ import WebSolutions from "@/components/WebSolutions/WebSolutions";
 import Intro from "@/components/main/Intro";
 import { Fade } from "react-awesome-reveal";
 import OurDesigns from "@/components/ourDesigns/OurDesigns";
+const Process = dynamic(() => import("../components/process/index"));
+
 // import { Alert } from "@mui/material";
 
 const Home = () => {
@@ -31,6 +34,7 @@ const Home = () => {
         slidesToScroll={1}
       />
       <Pricing/>
+      <Process/>
     </>
   );
 };

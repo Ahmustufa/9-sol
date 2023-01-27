@@ -44,7 +44,7 @@ function App() {
     },
   ];
   return (
-    <ParentGrid container mb={10} pb={10}>
+    <ParentGrid container  >
       <Grid item xs={12}>
         <Heading
           title={

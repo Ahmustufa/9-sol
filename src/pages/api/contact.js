@@ -40,12 +40,12 @@ export default function (req, res) {
                                 <strong style="color: #61045f;">a:</strong>  9 Solutions | Shop no 25, Jason terrace Clifton block 2, Karachi.
                             </p>
                             <p style= "font-size: small; color: #000; margin: 2px;"> 
-                                <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:9solutionsllc@gmail.com"  style="color:darkgreen; text-decoration: underline;">9solutionsllc@gmail.com</a>
-                                | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.ejazpatientcare.com</a>
+                                <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:admin@9solutions.co"  style="color:#61045f; text-decoration: underline;">admin@9solutions.co</a>
+                                | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
                             </p>
-                            <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
-                                <strong style="color: #61045f;">p:</strong>  0342-2586069 | 0344-8647722 
-                            </p>
+                            // <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
+                            //     <strong style="color: #61045f;">p:</strong>  0342-2586069 | 0344-8647722 
+                            // </p>
                             <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
                               <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                             </a>
@@ -96,12 +96,12 @@ export default function (req, res) {
                           <strong style="color: #61045f;">a:</strong>  9 Solutions | 651 N Broad St, Suite 201, Middletown, 19709, NewCastle, Delaware.
                       </p>
                       <p style= "font-size: small; color: #000; margin: 2px;"> 
-                          <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:9solutionsllc@gmail.com"  style="color:darkgreen; text-decoration: underline;">9solutionsllc@gmail.com</a>
+                          <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:admin@9solutions.co"  style="color:darkgreen; text-decoration: underline;">admin@9solutions.co</a>
                           | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
                       </p>
-                      <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
-                          <strong style="color: #61045f;">p:</strong>  0342-2586069 | 0344-8647722 
-                      </p>
+                      // <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
+                      //     <strong style="color: #61045f;">p:</strong>  0342-2586069 | 0344-8647722 
+                      // </p>
                       <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
                         <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                       </a>

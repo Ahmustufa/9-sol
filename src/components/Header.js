@@ -23,11 +23,18 @@ const Header = () => {
     >
       <Grid item xs={6}>
         <div className="flex justify-center">
-          <Image src={require('/public/images/logo/Dark-9Sol.png')} width={160} height={100}/>
+          <Image
+            src={require("/public/images/logo/Dark-9Sol.png")}
+            width={160}
+            height={100}
+          />
         </div>
       </Grid>
       <Grid item xs={2} className="flex justify-end items-center">
-        <a className="text-white" href="tel:+13322825382">+1-332-282-5382</a>
+        <Image src={require('/public/images/US-Flag-icon.png')} width={45} height={100}/>
+        <a className="text-white px-4" href="tel:+16506819645">
+          +1-(650) 681-9645
+        </a>
       </Grid>
       {/* <Grid item xs={1} className="flex justify-end items-center">
         <Typography className="text-white" >Live Chat</Typography>
