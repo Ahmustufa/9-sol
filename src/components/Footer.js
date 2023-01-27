@@ -6,7 +6,6 @@ import styled from "styled-components";
 import moment from "moment/moment";
 import Link from "next/link";
 
-
 const FooterContent2Div = styled.div`
   background-color: #232a38;
   padding: 16px 8%;
@@ -69,58 +68,56 @@ const FooterContent2Div = styled.div`
 const Footer = () => {
   return (
     <FooterContent2Div>
-    <Grid container>
-      <Grid item xs={3}>
-        <Box>
-          <Image
-            src={require("/public/images/logo/Dark-9Sol.png")}
-            width={300}
-          />
-        </Box>
-        <Stack spacing={2}>
-          <div className="flex px-6 items-center">
-            <AiOutlinePhone fontSize={30} color="white" />
-            <a className="text-white px-2" href="tel:+13322825382">
-              +1-332-282-5382
-            </a>
-          </div>
-          <div className="flex px-6 items-center">
-            <AiOutlineMail fontSize={30} color="white" />
-            <a className="text-white px-2" href="mailto:hr@9solutions.com">
-            hr@9solutions.com
-            </a>
-          </div>
-        </Stack>
+      <Grid container>
+        <Grid item xs={3}>
+          <Box>
+            <Image
+              src={require("/public/images/logo/Dark-9Sol.png")}
+              width={300}
+            />
+          </Box>
+          <Stack spacing={2}>
+            <div className="flex px-6 items-center">
+              <AiOutlinePhone fontSize={30} color="white" />
+              <a className="text-white px-2" href="tel:+13322825382">
+                +1-332-282-5382
+              </a>
+            </div>
+            <div className="flex px-6 items-center">
+              <AiOutlineMail fontSize={30} color="white" />
+              <a className="text-white px-2" href="mailto:admin@9solutions.com">
+                admin@9solutions.com
+              </a>
+            </div>
+          </Stack>
+        </Grid>
       </Grid>
-    </Grid>
-    <Grid container className="main-row">
+      <Grid container className="main-row">
         <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="first-col">
           <p>
             Copyright © {moment().format("YYYY")}
             <span style={{ fontWeight: 600 }}>
               <Link href="/" className="px-2">
-                 9solutions.co 
+                9solutions.co
               </Link>
             </span>
             | All rights reserved.
             <span style={{ fontWeight: 600 }} className="px-2">
-              <Link href="term_of_use">
-               Terms and Conditions 
-              </Link>
-             
+              <Link href="term_of_use">Terms and Conditions</Link>
+
               <Link href="/privacy_policy" className="px-2">
-                Privacy Policy 
+                Privacy Policy
               </Link>
             </span>
           </p>
         </Grid>
-        <Grid item  xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
+        <Grid item xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
           <a href="https://www.2checkout.com/homepage/" target="_blank">
-            <img alt="2-checkout" src={'/images/paymentlogosvertical.png'} />{" "}
+            <img alt="2-checkout" src={"/images/paymentlogosvertical.png"} />{" "}
           </a>
-          <h4 style={{ margin: 0 }} >Secure Payments by 2checkout</h4>
+          <h4 style={{ margin: 0 }}>Secure Payments by 2checkout</h4>
         </Grid>
-        <Grid item  xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
+        <Grid item xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
           <a
             href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"
             title="DMCA.com Protection Status"
@@ -134,7 +131,9 @@ const Footer = () => {
               alt="DMCA.com Protection Status"
             />
           </a>{" "}
-          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+            {" "}
+          </script>
         </Grid>
       </Grid>
     </FooterContent2Div>
