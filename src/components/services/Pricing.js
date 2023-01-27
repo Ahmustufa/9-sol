@@ -3,6 +3,7 @@ import { Stack } from "@mui/system";
 import styled from "styled-components";
 import CheckIcon from "@mui/icons-material/Check";
 import Heading from "../Title/Heading";
+import BlackButton from "../buttons/BlackButton";
 function App() {
   const data = [
     {
@@ -43,7 +44,7 @@ function App() {
     },
   ];
   return (
-    <ParentGrid container mb={10} pb={10} >
+    <ParentGrid container mb={10} pb={10}>
       <Grid item xs={12}>
         <Heading
           title={
@@ -92,11 +93,15 @@ function App() {
                     );
                   })}
                 </Stack>
-                <Stack mb={3}>
-                  <Button variant="outlined" styled={{ borderRadius: "50px" }}>
-                    Get started
-                  </Button>
-                </Stack>
+                {/* <Stack mb={3} style={{ width: "100%" }}> */}
+                  <a
+                  style={{margin: "20px 0px"}}
+                    className="px-2 flex justify-center"
+                    href="mailto:admin@9solutions.com"
+                  >
+                    <BlackButton style={{width: "100%"}}>Get Started</BlackButton>
+                  </a>
+                {/* </Stack> */}
               </Cards>
             );
           })}
@@ -107,35 +112,35 @@ function App() {
 }
 export default App;
 const Cards = styled(Grid)`
- background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  transition: .5s ease;
+  transition: 0.5s ease;
   &:hover {
-    box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
     transform-origin: right top;
     transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
-  transform-origin: center top;
-  transform: perspective(1000px) rotateX(10deg);
-  box-shadow: -15px 15px 50px rgba(0, 0, 0, .3);
-  transform-origin: left top;
-  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
-  box-shadow: 15px 5px 50px rgba(0, 0, 0, .3);
-  transform-origin: left center;
-  transform: perspective(1000px) rotateY(-10deg);
-  box-shadow: -15px 5px 50px rgba(0, 0, 0, .3);
-  transform-origin: right center;
-  transform: perspective(1000px) rotateY(10deg);
-  // box-shadow: 15px -15px 50px rgba(0, 0, 0, .3);
-  // transform-origin: right bottom;
-  // transform: perspective(1000px) rotateX(-10deg)
-  // rotateY(-10deg) rotateZ(-2deg);
-  // box-shadow: 0 -15px 50px rgba(0, 0, 0, .3);
-  // transform-origin: center bottom;
-  // transform: perspective(1000px) rotateX(-10deg);
-  // box-shadow: -15px -15px 50px rgba(0, 0, 0, .3);
-  // transform-origin: left bottom;
-  // transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    transform-origin: center top;
+    transform: perspective(1000px) rotateX(10deg);
+    box-shadow: -15px 15px 50px rgba(0, 0, 0, 0.3);
+    transform-origin: left top;
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
+    box-shadow: 15px 5px 50px rgba(0, 0, 0, 0.3);
+    transform-origin: left center;
+    transform: perspective(1000px) rotateY(-10deg);
+    box-shadow: -15px 5px 50px rgba(0, 0, 0, 0.3);
+    transform-origin: right center;
+    transform: perspective(1000px) rotateY(10deg);
+    // box-shadow: 15px -15px 50px rgba(0, 0, 0, .3);
+    // transform-origin: right bottom;
+    // transform: perspective(1000px) rotateX(-10deg)
+    // rotateY(-10deg) rotateZ(-2deg);
+    // box-shadow: 0 -15px 50px rgba(0, 0, 0, .3);
+    // transform-origin: center bottom;
+    // transform: perspective(1000px) rotateX(-10deg);
+    // box-shadow: -15px -15px 50px rgba(0, 0, 0, .3);
+    // transform-origin: left bottom;
+    // transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
   }
 `;
 const Row = styled(Grid)`

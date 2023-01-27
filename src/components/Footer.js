@@ -68,14 +68,14 @@ const FooterContent2Div = styled.div`
 const Footer = () => {
   return (
     <FooterContent2Div>
-      <Grid container>
-        <Grid item xs={3}>
-          <Box>
+      <Grid container mb={5}>
+        <Grid item xs={4}>
+          {/* <Box> */}
             <Image
               src={require("/public/images/logo/Dark-9Sol.png")}
               width={300}
             />
-          </Box>
+          {/* </Box> */}
           <Stack spacing={2}>
             <div className="flex px-6 items-center">
               <AiOutlinePhone fontSize={30} color="white" />
@@ -111,12 +111,12 @@ const Footer = () => {
             </span>
           </p>
         </Grid>
-        <Grid item xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
+        {/* <Grid item xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
           <a href="https://www.2checkout.com/homepage/" target="_blank">
             <img alt="2-checkout" src={"/images/paymentlogosvertical.png"} />{" "}
           </a>
           <h4 style={{ margin: 0 }}>Secure Payments by 2checkout</h4>
-        </Grid>
+        </Grid> */}
         <Grid item xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
           <a
             href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"

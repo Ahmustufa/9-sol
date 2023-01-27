@@ -1,10 +1,12 @@
-import { Alert, Box, Stack, TextField } from "@mui/material";
+import { Alert, Box, Button, Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
 import Text from "../Typography/Text";
 import styled from "styled-components";
 import BlackButton from "../buttons/BlackButton";
 import Snackbar from "@mui/material/Snackbar";
 import Slide from "@mui/material/Slide";
+import CircularProgress from "@mui/material/CircularProgress";
+
 const ContactForm = () => {
   const [data, setData] = useState({
     fullName: "",
@@ -12,16 +14,21 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
-  const [loading, setLoading] = React.useState(false);
+  const [initState, setInitState] = React.useState({
+    loading: false,
+    success: false,
+    error: false,
+  });
   const [toast, setToast] = React.useState({
     open: false,
   });
+
   const SlideTransition = (props) => {
     return <Slide {...props} direction="up" />;
   };
   const handleClose = () => {
-    setState({
-      ...state,
+    setToast({
+      ...toast,
       open: false,
     });
   };
@@ -31,7 +38,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async () => {
-    setLoading(true);
+    setInitState({ ...initState, loading: true });
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -42,8 +49,9 @@ const ContactForm = () => {
     })
       .then((res) => {
         if (res.status === 200) {
-          setLoading(false);
-          console.log("Response succeeded > ", res);
+          setInitState({ ...initState, loading: false, success: true });
+          setToast({ ...toast, open: true });
+          // console.log("Response succeeded > ", res);
           // setData(initialState);
           // <Alert severity="success">This is a success message!</Alert>
         } else {
@@ -52,7 +60,7 @@ const ContactForm = () => {
       })
       .catch((err) => {
         console.log("err", err);
-        setLoading(false);
+        setInitState({ ...initState, loading: false, error: true });
       });
   };
 
@@ -61,10 +69,16 @@ const ContactForm = () => {
       <Snackbar
         open={toast.open}
         onClose={handleClose}
-        TransitionComponent={"Fade"}
-        message="Message Success"
+        style={{backgroundColor: "green"}}
+        autoHideDuration={6000}
+        TransitionComponent={"Slide"}
+        // message="Message Success"
         key={0}
-      />
+      >
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+          Successfully sent! 
+        </Alert>
+      </Snackbar>
       <Div
         component="form"
         autoComplete="off"
@@ -113,15 +127,20 @@ const ContactForm = () => {
             rows={4}
             variant="outlined"
           />
-          {/* <div className="flex justify-center items-center w-full"> */}
-          <BlackButton
-            
-            onClick={handleSubmit}
-            style={{ fontWeight: "bold", fontSize: 16 }}
-          >
-            Submit
-          </BlackButton>
-          {/* </div> */}
+
+          {!initState?.loading ? (
+            <BlackButton
+              onClick={handleSubmit}
+              style={{ fontWeight: "bold", fontSize: 16 }}
+            >
+              Submit
+            </BlackButton>
+          ) : (
+            <div className="flex justify-center items-center w-full">
+              <CircularProgress />
+            </div>
+          )}
+          {/* <Button loading> Submit</Button> */}
         </Stack>
       </Div>
     </>

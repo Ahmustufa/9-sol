@@ -131,7 +131,7 @@ const OurDesigns = (props) => {
     <>
       <Modal onOpen={modalState.visible} onClose={closeModal}>
         <Box>
-          sadsa
+          {/* sadsa */}
           {/* <Image alt="img" src={modalState.imgSrc}  /> */}
           </Box>
       </Modal>

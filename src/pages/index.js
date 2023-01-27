@@ -7,6 +7,7 @@ import WebSolutions from "@/components/WebSolutions/WebSolutions";
 import Intro from "@/components/main/Intro";
 import { Fade } from "react-awesome-reveal";
 import OurDesigns from "@/components/ourDesigns/OurDesigns";
+// import { Alert } from "@mui/material";
 
 const Home = () => {
  
@@ -23,7 +24,6 @@ const Home = () => {
       <RatingBar />
       <WebSolutions />
       <OurDesigns/>
-      <WebSolutions  />
       <TopRatedProfessionals
         backgroundColor="#eeeeee"
         title="Get top-rated and recognized professionals onboard!"

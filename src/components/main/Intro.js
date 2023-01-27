@@ -19,7 +19,7 @@ const Intro = () => {
   };
   return (
     <Grid container p={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} xl={8} lg={8} md={8} sm={12}>
         <Stack spacing={2} display="flex">
           <Grid container>
             <Grid
@@ -35,7 +35,7 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={10} sm={10} xl={8} lg={8} md={10}>
+            <Grid item xs={12} sm={12} xl={8} lg={8} md={10}>
               <Text fontSize={40} fontWeight="bold" className="break-words">
                 Go Digital With Leading <br />
                 <span style={{ color: "#aa076b" }}>
