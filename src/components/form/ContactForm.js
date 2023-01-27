@@ -69,15 +69,26 @@ const ContactForm = () => {
       <Snackbar
         open={toast.open}
         onClose={handleClose}
-        style={{backgroundColor: "green"}}
+        style={{ backgroundColor: "green" }}
         autoHideDuration={6000}
         TransitionComponent={"Slide"}
-        // message="Message Success"
+
         key={0}
       >
-        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-          Successfully sent! 
-        </Alert>
+        {initState.success ? (
+          <Alert
+            onClose={handleClose}
+            variant="filled"
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Successfully sent!
+          </Alert>
+        ) : (
+          <Alert variant="filled" severity="error">
+          We cannot process your request at this time.
+          </Alert>
+        )}
       </Snackbar>
       <Div
         component="form"

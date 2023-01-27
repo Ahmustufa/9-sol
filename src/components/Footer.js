@@ -71,16 +71,16 @@ const Footer = () => {
       <Grid container mb={5}>
         <Grid item xs={4}>
           {/* <Box> */}
-            <Image
-              src={require("/public/images/logo/Dark-9Sol.png")}
-              width={300}
-            />
+          <Image
+            src={require("/public/images/logo/Dark-9Sol.png")}
+            width={300}
+          />
           {/* </Box> */}
           <Stack spacing={2}>
             <div className="flex px-6 items-center">
               <AiOutlinePhone fontSize={30} color="white" />
-              <a className="text-white px-2" href="tel:+13322825382">
-                +1-332-282-5382
+              <a className="text-white px-2" href="tel:+16506819645">
+                +1-(650) 681-9645
               </a>
             </div>
             <div className="flex px-6 items-center">
