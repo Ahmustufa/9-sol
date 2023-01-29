@@ -3,22 +3,26 @@ import styled from "styled-components";
 
 const StyledContent = styled.div`
   display: flex;
-  // justify-content: space-around;
+  /* justify-content: center; */
   align-items: center;
   width: max-content;
   margin: auto;
   position: relative;
-  border: 1px solid #2a2a2a;
-
+  border: 1px solid white;
+  color: white;
   .item {
     padding: 12px 24px;
     cursor: pointer;
     transition: 0.6s;
     text-align: center;
   }
-
+  @media (max-width: 414px) {
+    width: min-content;
+    text-overflow: clip;
+    justify-content: center;
+  }
   .active {
-    color: #fff;
+    color: black;
     z-index: 10;
   }
 
@@ -27,14 +31,21 @@ const StyledContent = styled.div`
     top: 0px;
     transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
-    background-color: #2a2a2a;
+    background-color: white;
     height: 100%;
     z-index: 0;
   }
 
-  @media only screen and (max-width: 576px) {
+  /* margin: 0px 10px; */
+  @media (max-width: 576px) {
     .item {
       font-size: 12px;
+      padding: 16px 8px;
+    }
+  }
+  @media (max-width: 742px) and (min-width: 580px) {
+    .item {
+      font-size: 16px;
       padding: 12px 10px;
     }
   }

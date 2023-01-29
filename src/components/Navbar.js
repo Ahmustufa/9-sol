@@ -15,6 +15,7 @@ import { Divider } from "@mui/material";
 import Header from "./Header";
 import Text from "./Typography/Text";
 import { useRouter } from "next/router";
+import Image from "next/image";
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -107,7 +108,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <Image/>
           </Text>
           <Box
             sx={{

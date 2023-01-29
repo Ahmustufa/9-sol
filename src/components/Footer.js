@@ -5,7 +5,9 @@ import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import styled from "styled-components";
 import moment from "moment/moment";
 import Link from "next/link";
-
+import Text from "./Typography/Text";
+import {RxDoubleArrowRight} from 'react-icons/rx'
+import Bounce from "./animation/Bounce";
 const FooterContent2Div = styled.div`
   background-color: #232a38;
   padding: 16px 8%;
@@ -71,10 +73,12 @@ const Footer = () => {
       <Grid container mb={5}>
         <Grid item xs={4}>
           {/* <Box> */}
+          <Link href="/">
           <Image
             src={require("/public/images/logo/Dark-9Sol.png")}
             width={300}
           />
+          </Link>
           {/* </Box> */}
           <Stack spacing={2}>
             <div className="flex px-6 items-center">
@@ -85,10 +89,42 @@ const Footer = () => {
             </div>
             <div className="flex px-6 items-center">
               <AiOutlineMail fontSize={30} color="white" />
-              <a className="text-white px-2" href="mailto:admin@9solutions.com">
-                admin@9solutions.com
+              <a className="text-white px-2" href="mailto:management@9solutions.com">
+                management@9solutions.com
               </a>
             </div>
+          </Stack>
+        </Grid>
+        <Grid item xs={2}>
+          <Box display="flex">
+
+        <Text variant="h6" className="text-white mb-2 text-center p-5">Menu</Text>
+          </Box>
+          <Stack spacing={2}>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/aboutus'>About</Link>
+          </div>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/blogs'>Blog</Link>
+          </div>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/contactus'>Contact</Link>
+          </div>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/services'>Services</Link>
+          </div>
           </Stack>
         </Grid>
       </Grid>
@@ -111,12 +147,11 @@ const Footer = () => {
             </span>
           </p>
         </Grid>
-        {/* <Grid item xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
+        <Grid item xl={2} lg={6} md={6} sm={12} xs={12} className="second-col">
           <a href="https://www.2checkout.com/homepage/" target="_blank">
             <img alt="2-checkout" src={"/images/paymentlogosvertical.png"} />{" "}
           </a>
-          <h4 style={{ margin: 0 }}>Secure Payments by 2checkout</h4>
-        </Grid> */}
+        </Grid>
         <Grid item xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
           <a
             href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"

@@ -108,9 +108,10 @@ const ContactForm = () => {
             }}
             render={({ field: { onChange, value } }) => (
               <Input
-                InputProps={{
-                  startAdornment: <AiOutlineUser position="start" size={20} />,
-                }}
+                // InputProps={{
+                //   startAdornment: <AiOutlineUser position="start" size={20} />,
+                // }}
+                placeholder="Full Name"
                 onChange={onChange}
                 value={value}
                 label={"Name"}
@@ -131,9 +132,10 @@ const ContactForm = () => {
             control={control}
             render={({ field: { onChange, value } }) => (
               <Input
-                InputProps={{
-                  startAdornment: <AiOutlineMail position="start" size={20} />,
-                }}
+                // InputProps={{
+                //   startAdornment: <AiOutlineMail position="start" size={20} />,
+                // }}
+                placeholder="Email"
                 onChange={onChange}
                 value={value}
                 label={"Email"}
@@ -154,6 +156,7 @@ const ContactForm = () => {
             render={({ field: { onChange, value } }) => (
               <PhoneField
                 value={value}
+                placeholder="Phone Number"
                 onChange={onChange}
                 defaultCountry="US"
               />
