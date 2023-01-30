@@ -1,12 +1,18 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import RatingBar from "@/components/Bar/RatingBar";
-import Pricing from '../components/services/Pricing'
+import Pricing from "../components/services/Pricing";
 import TopRatedProfessionals from "@/components/carousel/TopRatedProfessionals";
 import WebSolutions from "@/components/WebSolutions/WebSolutions";
 import Intro from "@/components/main/Intro";
 import { Fade } from "react-awesome-reveal";
 import OurDesigns from "@/components/ourDesigns/OurDesigns";
+import PricingCards from "@/components/services/PricingCards";
+const Process = dynamic(() => import("../components/process/index"));
+
+// import { Alert } from "@mui/material";
+
 const Home = () => {
   return (
     <>
@@ -19,15 +25,23 @@ const Home = () => {
       <Intro />
       <RatingBar />
       <WebSolutions />
-      <OurDesigns/>
-      <WebSolutions  />
+      <OurDesigns />
       <TopRatedProfessionals
         backgroundColor="#eeeeee"
         title="Get top-rated and recognized professionals onboard!"
         slidesToShow={4}
         slidesToScroll={1}
       />
-      <Pricing/>
+      <div
+        style={{
+          paddingBottom: "50px",
+          background: "linear-gradient(55deg, black 15%, #273444 90%)",
+        }}
+      >
+        <Pricing />
+      </div>
+      {/* <PricingCards/> */}
+      <Process />
     </>
   );
 };

@@ -6,8 +6,10 @@ import Image from "next/image";
 import BlackButton from "@/components/buttons/BlackButton";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Typewriter } from "react-simple-typewriter";
-
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
 const Intro = () => {
+  
   const handleType = (count) => {
     // console.log(count);
   };
@@ -17,7 +19,7 @@ const Intro = () => {
   };
   return (
     <Grid container p={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} xl={8} lg={8} md={8} sm={12}>
         <Stack spacing={2} display="flex">
           <Grid container>
             <Grid
@@ -33,7 +35,7 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={10} sm={10} xl={8} lg={8} md={10}>
+            <Grid item xs={12} sm={12} xl={8} lg={8} md={10}>
               <Text fontSize={40} fontWeight="bold" className="break-words">
                 Go Digital With Leading <br />
                 <span style={{ color: "#aa076b" }}>
@@ -69,7 +71,7 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={8} className="flex justify-center">
+            <Grid item xs={12} sm={12} xl={8} lg={8} md={10} className="flex justify-center">
               <Text fontSize={18} className="break-words">
                 Making a mark in today's online world is a crucial element of
                 marketing. Since the world has started to enjoy better results
@@ -92,7 +94,7 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={6} className="flex flex-col">
+            <Grid item xs={12} xl={6} lg={6} md={8} sm={12} className="flex flex-col">
               <Stack spacing={1}>
                 <div className="flex items-center ">
                   <span className="pr-2">

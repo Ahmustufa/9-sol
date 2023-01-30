@@ -32,20 +32,20 @@ export default function (req, res) {
                     <td style="width: 90px;">
                         <img style="width: 90px;" src="/public/favicon.svg"/>
                     </td>
-                    <td style="width: 3px; background-color: #5bb286;"></td>
+                    <td style="width: 3px; background-color: #61045f;"></td>
                     <td style="width: 430px; padding-left: 10px;">
-                          <p style="color:#5bb286; margin: 0 12px;"> 
+                          <p style="color:#61045f; margin: 0 12px;"> 
                             <strong>Business Development</strong>
                             <p style="font-size: small; color: #000; margin: 2px;"> 
-                                <strong style="color: #5bb286;">a:</strong>  9 Solutions | Shop no 25, Jason terrace Clifton block 2, Karachi.
+                                <strong style="color: #61045f;">a:</strong>  9 Solutions | Shop no 25, Jason terrace Clifton block 2, Karachi.
                             </p>
                             <p style= "font-size: small; color: #000; margin: 2px;"> 
-                                <strong style="color: #5bb286;">e:</strong> <a class="fa" href="mailto:9solutionsllc@gmail.com"  style="color:darkgreen; text-decoration: underline;">9solutionsllc@gmail.com</a>
-                                | <strong  style="color: #5bb286;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.ejazpatientcare.com</a>
+                                <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:management@9solutions.co"  style="color:#61045f; text-decoration: underline;">management@9solutions.co</a>
+                                | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
                             </p>
-                            <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
-                                <strong style="color: #5bb286;">p:</strong>  0342-2586069 | 0344-8647722 
-                            </p>
+                             <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
+                                <strong style="color: #61045f;">p:</strong> +1 (650) 6819645 
+                             </p>
                             <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
                               <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                             </a>
@@ -88,20 +88,20 @@ export default function (req, res) {
               <td style="width: 90px;">
                   <img style="width: 90px;" src="/public/favicon.svg"/>
               </td>
-              <td style="width: 3px; background-color: #5bb286;"></td>
+              <td style="width: 3px; background-color: #61045f;"></td>
               <td style="width: 430px; padding-left: 10px;">
-                    <p style="color:#5bb286; margin: 0 12px;"> 
+                    <p style="color:#61045f; margin: 0 12px;"> 
                       <strong>Business Development</strong>
                       <p style="font-size: small; color: #000; margin: 2px;"> 
-                          <strong style="color: #5bb286;">a:</strong>  9 Solutions | 651 N Broad St, Suite 201, Middletown, 19709, NewCastle, Delaware.
+                          <strong style="color: #61045f;">a:</strong>  9 Solutions | 651 N Broad St, Suite 201, Middletown, 19709, NewCastle, Delaware.
                       </p>
                       <p style= "font-size: small; color: #000; margin: 2px;"> 
-                          <strong style="color: #5bb286;">e:</strong> <a class="fa" href="mailto:9solutionsllc@gmail.com"  style="color:darkgreen; text-decoration: underline;">9solutionsllc@gmail.com</a>
-                          | <strong  style="color: #5bb286;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
+                          <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:management@9solutions.co"  style="color:darkgreen; text-decoration: underline;">management@9solutions.co</a>
+                          | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
                       </p>
-                      <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
-                          <strong style="color: #5bb286;">p:</strong>  0342-2586069 | 0344-8647722 
-                      </p>
+                       <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
+                          <strong style="color: #61045f;">p:</strong>  +1 (650) 6819645 
+                       </p>
                       <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
                         <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                       </a>

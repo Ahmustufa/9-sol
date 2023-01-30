@@ -5,8 +5,9 @@ import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import styled from "styled-components";
 import moment from "moment/moment";
 import Link from "next/link";
-
-
+import Text from "./Typography/Text";
+import {RxDoubleArrowRight} from 'react-icons/rx'
+import Bounce from "./animation/Bounce";
 const FooterContent2Div = styled.div`
   background-color: #232a38;
   padding: 16px 8%;
@@ -69,58 +70,89 @@ const FooterContent2Div = styled.div`
 const Footer = () => {
   return (
     <FooterContent2Div>
-    <Grid container>
-      <Grid item xs={3}>
-        <Box>
+      <Grid container mb={5}>
+        <Grid item xs={4}>
+          {/* <Box> */}
+          <Link href="/">
           <Image
             src={require("/public/images/logo/Dark-9Sol.png")}
             width={300}
           />
-        </Box>
-        <Stack spacing={2}>
-          <div className="flex px-6 items-center">
-            <AiOutlinePhone fontSize={30} color="white" />
-            <a className="text-white px-2" href="tel:+13322825382">
-              +1-332-282-5382
-            </a>
+          </Link>
+          {/* </Box> */}
+          <Stack spacing={2}>
+            <div className="flex px-6 items-center">
+              <AiOutlinePhone fontSize={30} color="white" />
+              <a className="text-white px-2" href="tel:+16506819645">
+                +1-(650) 681-9645
+              </a>
+            </div>
+            <div className="flex px-6 items-center">
+              <AiOutlineMail fontSize={30} color="white" />
+              <a className="text-white px-2" href="mailto:management@9solutions.com">
+                management@9solutions.com
+              </a>
+            </div>
+          </Stack>
+        </Grid>
+        <Grid item xs={2}>
+          <Box display="flex">
+
+        <Text variant="h6" className="text-white mb-2 text-center p-5">Menu</Text>
+          </Box>
+          <Stack spacing={2}>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/aboutus'>About</Link>
           </div>
-          <div className="flex px-6 items-center">
-            <AiOutlineMail fontSize={30} color="white" />
-            <a className="text-white px-2" href="mailto:hr@9solutions.com">
-            hr@9solutions.com
-            </a>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/blogs'>Blog</Link>
           </div>
-        </Stack>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/contactus'>Contact</Link>
+          </div>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
+          <Link href='/services'>Services</Link>
+          </div>
+          </Stack>
+        </Grid>
       </Grid>
-    </Grid>
-    <Grid container className="main-row">
+      <Grid container className="main-row">
         <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="first-col">
           <p>
             Copyright © {moment().format("YYYY")}
             <span style={{ fontWeight: 600 }}>
               <Link href="/" className="px-2">
-                 9solutions.co 
+                9solutions.co
               </Link>
             </span>
             | All rights reserved.
             <span style={{ fontWeight: 600 }} className="px-2">
-              <Link href="term_of_use">
-               Terms and Conditions 
-              </Link>
-             
+              <Link href="term_of_use">Terms and Conditions</Link>
+
               <Link href="/privacy_policy" className="px-2">
-                Privacy Policy 
+                Privacy Policy
               </Link>
             </span>
           </p>
         </Grid>
-        <Grid item  xl={4} lg={6} md={6} sm={12} xs={12} className="second-col">
+        <Grid item xl={2} lg={6} md={6} sm={12} xs={12} className="second-col">
           <a href="https://www.2checkout.com/homepage/" target="_blank">
-            <img alt="2-checkout" src={'/images/paymentlogosvertical.png'} />{" "}
+            <img alt="2-checkout" src={"/images/paymentlogosvertical.png"} />{" "}
           </a>
-          <h4 style={{ margin: 0 }} >Secure Payments by 2checkout</h4>
         </Grid>
-        <Grid item  xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
+        <Grid item xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
           <a
             href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"
             title="DMCA.com Protection Status"
@@ -134,7 +166,9 @@ const Footer = () => {
               alt="DMCA.com Protection Status"
             />
           </a>{" "}
-          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+            {" "}
+          </script>
         </Grid>
       </Grid>
     </FooterContent2Div>
