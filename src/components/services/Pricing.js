@@ -194,11 +194,11 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
-                      xs={4}
+                      xs={7}
                       xl={2.5}
                       lg={3.5}
                       md={3}
-                      sm={4}
+                      sm={3}
                       px={2}
                       className="rounded-lg"
                     >
@@ -300,11 +300,11 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
-                      xs={4}
+                      xs={7}
                       xl={2.5}
                       lg={3.5}
                       md={3}
-                      sm={4}
+                      sm={3}
                       px={2}
                       className="rounded-lg"
                     >
@@ -406,11 +406,11 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
-                      xs={4}
+                      xs={7}
                       xl={2.5}
                       lg={3.5}
                       md={3}
-                      sm={4}
+                      sm={3}
                       px={2}
                       className="rounded-lg"
                     >
@@ -512,11 +512,11 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
-                      xs={4}
+                      xs={7}
                       xl={2.5}
                       lg={3.5}
                       md={3}
-                      sm={4}
+                      sm={3}
                       px={2}
                       className="rounded-lg"
                     >

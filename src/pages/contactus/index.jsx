@@ -274,8 +274,8 @@ const ContactUs = () => {
             </p>
           </h1>
         </section>
-        <ParentGrid container display="flex" justifyContent="center" mb={12}>
-          <Grid item xs={6}>
+        <ParentGrid container display="flex" justifyContent="center" mt={4} mb={12}>
+          <Grid item xl={4} lg={5} md={6} sm={8} xs={10}>
             <Box
               onSubmit={handleSubmit(onSubmit)}
               component="form"
@@ -415,7 +415,7 @@ const ParentGrid = styled(Grid)``;
 
 const PhoneField = styled(PhoneInput)`
   .PhoneInputInput {
-    /* padding: 20px; */
+    padding: 20px;
     /* margin: 0px; */
     &:focus {
       border-style: none;
@@ -423,5 +423,5 @@ const PhoneField = styled(PhoneInput)`
   }
   /* padding: 20px; */
   border-radius: 5px;
-  border: 1.2px solid grey;
+  border: 1px solid grey;
 `;

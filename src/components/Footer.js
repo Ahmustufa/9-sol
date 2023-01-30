@@ -10,6 +10,7 @@ import {RxDoubleArrowRight} from 'react-icons/rx'
 import Bounce from "./animation/Bounce";
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import Ripple from "./animation/Ripple";
 const FooterContent2Div = styled.div`
   background-color: #232a38;
   padding: 16px 8%;
@@ -73,7 +74,7 @@ const Footer = () => {
   return (
     <FooterContent2Div>
       <Grid container mb={5}>
-        <Grid item xl={4} lg={5} md={6} sm={8} xs={12}>
+        <Grid item xl={4} lg={4} md={6} sm={8} xs={12}>
           {/* <Box> */}
           <Link href="/">
           <Image
@@ -134,6 +135,12 @@ const Footer = () => {
           <Link href='/services'>Services</Link>
           </div>
           </Stack>
+        </Grid>
+        <Grid item xl={6} lg={6} sx={{display: {xl: "flex", lg: "flex", md: "none", sm: "none", xs: "none"}, justifyContent: "end"}}>
+        <Ripple>
+          <Image src={require('/public/images/mobile/VR.png')} height={400} />
+        </Ripple>
+      
         </Grid>
       </Grid>
       <Grid container className="main-row">

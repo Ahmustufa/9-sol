@@ -125,11 +125,11 @@ const StyledDiv = styled.div`
       }
     }
 
-    .image-col {
+    /* .image-col {
       img {
         width: 250px;
       }
-    }
+    } */
   }
 
   @media (max-width: 600px) {
