@@ -12,6 +12,7 @@ import { useForm, Controller } from "react-hook-form";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
+import ContactForm from "@/components/form/ContactForm";
 const StyledSection = styled.div`
   .map-section {
     padding: 5% 5%;
@@ -273,122 +274,126 @@ const ContactUs = () => {
             </p>
           </h1>
         </section>
-        <Grid container my={12} display="flex" justifyContent="center">
-          <Grid item xl={8} lg={8} md={12} sm={6} xs={6}>
-            <Stack spacing={1}>
-              {errors.fullName && (
-                <p style={{ color: "red", fontSize: 12 }}>
-                  Name should be atleast 2 characters
-                </p>
-              )}
-              <Controller
-                name={"fullName"}
-                control={control}
-                rules={{
-                  required: true,
-                  minLength: 2,
-                }}
-                render={({ field: { onChange, value } }) => (
-                  <Input
-                    // InputProps={{
-                    //   startAdornment: <AiOutlineUser position="start" size={20} />,
-                    // }}
-                    placeholder="Full Name"
-                    onChange={onChange}
-                    value={value}
-                    label={"Name"}
-                  />
+        <ParentGrid container display="flex" justifyContent="center" mb={12}>
+          <Grid item xs={6}>
+            <Box
+              onSubmit={handleSubmit(onSubmit)}
+              component="form"
+              autoComplete="off"
+            >
+              <Stack spacing={2}>
+                {errors.fullName && (
+                  <p style={{ color: "red", fontSize: 12 }}>
+                    Name should be atleast 2 characters
+                  </p>
                 )}
-              />
-              {errors.email && (
-                <p style={{ color: "red", fontSize: 12 }}>
-                  Invalid email address.
-                </p>
-              )}
-              <Controller
-                name={"email"}
-                rules={{
-                  required: true,
-                  minLength: 5,
-                  pattern:
-                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                }}
-                control={control}
-                render={({ field: { onChange, value } }) => (
-                  <Input
-                    // InputProps={{
-                    //   startAdornment: <AiOutlineMail position="start" size={20} />,
-                    // }}
-                    placeholder="Email"
-                    onChange={onChange}
-                    value={value}
-                    label={"Email"}
-                  />
+                <Controller
+                  name={"fullName"}
+                  control={control}
+                  rules={{
+                    required: true,
+                    minLength: 2,
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    <Input
+                      placeholder="Full Name"
+                      onChange={onChange}
+                      value={value}
+                      label={"Name"}
+                    />
+                  )}
+                />
+                {errors.email && (
+                  <p style={{ color: "red", padding: 0, fontSize: 12 }}>
+                    Invalid email address.
+                  </p>
                 )}
-              />
+                <Controller
+                  name={"email"}
+                  rules={{
+                    required: true,
+                    minLength: 5,
+                    pattern:
+                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  }}
+                  control={control}
+                  render={({ field: { onChange, value } }) => (
+                    <Input
+                      placeholder="Email"
+                      onChange={onChange}
+                      value={value}
+                      label={"Email"}
+                    />
+                  )}
+                />
 
-              {errors.phone && (
-                <p style={{ color: "red", fontSize: 12 }}>
-                  Invalid Phone number
-                </p>
-              )}
-              <Controller
-                name="phone"
-                control={control}
-                rules={{
-                  validate: (value) =>
-                    value ? isValidPhoneNumber(value) === true : false,
-                }}
-                render={({ field: { onChange, value } }) => (
-                  <PhoneField
-                    value={value}
-                    placeholder="Phone Number"
-                    onChange={onChange}
-                    defaultCountry="US"
-                  />
+                {errors.phone && (
+                  <p style={{ color: "red", fontSize: 12 }}>
+                    Invalid Phone number
+                  </p>
                 )}
-              />
-              {errors.message && (
-                <p style={{ color: "red", fontSize: 12 }}>
-                  Message should be atleast 2 characters
-                </p>
-              )}
-              <Controller
-                name={"message"}
-                control={control}
-                rules={{
-                  required: true,
-                  minLength: 2,
-                }}
-                render={({ field: { onChange, value } }) => (
-                  <Input
-                    id="standard-multiline-static"
-                    multiline
-                    required
-                    placeholder="Talk about your Project"
-                    onChange={onChange}
-                    value={value}
-                    rows={4}
-                    // label={"Name"}
-                  />
+                <Controller
+                  name="phone"
+                  control={control}
+                  rules={{
+                    validate: (value) =>
+                      value ? isValidPhoneNumber(value) === true : false,
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    <PhoneField
+                      value={value}
+                      placeholder="Phone Number"
+                      onChange={onChange}
+                      defaultCountry="US"
+                    />
+                  )}
+                />
+                {errors.message && (
+                  <p style={{ color: "red", fontSize: 12 }}>
+                    Message should be atleast 2 characters
+                  </p>
                 )}
-              />
+                <Controller
+                  name={"message"}
+                  control={control}
+                  rules={{
+                    required: true,
+                    minLength: 2,
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    <Input
+                      id="standard-multiline-static"
+                      multiline
+                      required
+                      placeholder="Talk about your Project"
+                      onChange={onChange}
+                      value={value}
+                      rows={4}
+                      // label={"Name"}
+                    />
+                  )}
+                />
 
-              {!initState?.loading ? (
-                <BlackButton
-                  onClick={handleSubmit(onSubmit)}
-                  style={{ fontWeight: "bold", fontSize: 16 }}
-                >
-                  Submit
-                </BlackButton>
-              ) : (
-                <div className="flex justify-center items-center w-full">
-                  <CircularProgress />
-                </div>
-              )}
-            </Stack>
+                {!initState?.loading ? (
+                  <BlackButton
+                    onClick={handleSubmit(onSubmit)}
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: 16,
+                      borderRadius: 30,
+                    }}
+                  >
+                    Submit
+                  </BlackButton>
+                ) : (
+                  <div className="flex justify-center items-center w-full">
+                    <CircularProgress />
+                  </div>
+                )}
+              </Stack>
+            </Box>
           </Grid>
-        </Grid>
+        </ParentGrid>
       </StyledSection>
     </>
   );
@@ -397,17 +402,16 @@ const ContactUs = () => {
 export default ContactUs;
 
 const Input = styled(TextField)`
+  /* width: 50%; */
   .MuiOutlinedInput-notchedOutline {
-    border-color: black !important;
+    border-color: grey !important;
   }
   .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: #aa076b !important;
   }
 `;
 
-const Div = styled(Box)`
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-`;
+const ParentGrid = styled(Grid)``;
 
 const PhoneField = styled(PhoneInput)`
   .PhoneInputInput {
@@ -417,7 +421,7 @@ const PhoneField = styled(PhoneInput)`
       border-style: none;
     }
   }
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 5px;
-  border: 1.2px solid black;
+  border: 1.2px solid grey;
 `;

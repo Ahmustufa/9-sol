@@ -22,12 +22,12 @@ export const items = [
     to: "/services",
     icon: <LocalOfferOutlinedIcon />,
   },
-  {
-    id: 4,
-    title: "Blogs",
-    to: "/blogs",
-    icon: <BookOutlinedIcon />,
-  },
+  // {
+  //   id: 4,
+  //   title: "Blogs",
+  //   to: "/blogs",
+  //   icon: <BookOutlinedIcon />,
+  // },
   {
     id: 5,
     title: "Contact",

@@ -34,21 +34,21 @@ const StyledDiv = styled.div`
   .dot {
     border-radius: 50%;
     background-color: #fff;
-    border: 2px solid #61045f;
+    border: 2px solid #aa076b;
     box-sizing: border-box;
     z-index: 1;
     cursor: pointer;
     transition: 0.3s ease;
 
     &:hover {
-      background-color: #61045f;
+      background-color: #aa076b;
     }
   }
 
   .moving-dot {
     position: absolute;
     border-radius: 50%;
-    background-color: #61045f;
+    background-color: #aa076b;
     transition: all 0.3s ease-in-out;
     z-index: 1;
     box-shadow: 0px 0px 15px #aa076b;
@@ -87,7 +87,7 @@ const StyledDiv = styled.div`
   }
 
   .arrow-icon {
-    color: #61045f;
+    color: #aa076b;
     font-size: 24px;
     cursor: pointer;
   }
@@ -264,7 +264,7 @@ const Process = ({ type, size }) => {
                 <div className="dots-background" />
                 <p
                   style={{
-                    color: value === index ? "#61045f" : "#969595",
+                    color: value === index ? "#aa076b" : "#969595",
                     fontWeight: value === index ? 600 : 500,
                     userSelect: "none",
                   }}
@@ -302,7 +302,7 @@ const Process = ({ type, size }) => {
               className="arrow-icon"
               onClick={() => setValue((prev) => (prev > 0 ? prev - 1 : 0))}
             />
-            <h3 style={{ color: "#61045f" }}>
+            <h3 style={{ color: "#aa076b" }}>
               <b>{steps[value]?.title}</b>
             </h3>
             <HiChevronDoubleRight

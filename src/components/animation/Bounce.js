@@ -9,7 +9,7 @@ const Bounce =(props)=> {
 
 export default Bounce
 const Bounces = styled.div `
-animation: shake 3.5s ease infinite;
+animation: shake 4s ease infinite;
 @keyframes shake {
 	0%, 100% {transform: translateX(0);}
 	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}

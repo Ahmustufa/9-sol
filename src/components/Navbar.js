@@ -41,7 +41,7 @@ function ResponsiveAppBar() {
       position="sticky"
       // className="bg-white"
       style={{ backgroundColor: "white", zIndex: 2 }}
-      elevation={0}
+      elevation={2}
     >
       <Header />
       <Container maxWidth="xl">
@@ -91,8 +91,8 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Text
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          {/* <Text
             variant="h5"
             noWrap
             component="a"
@@ -108,8 +108,16 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <Image  src={require=('/public/images/logo/9Sol.png')} width={100} height={100}/>
-          </Text>
+          </Text> */}
+          <Box sx={{display: {xl: "none", lg: "none",}}}>
+          <Link href="/">
+            <Image
+              src={require('/public/favicon.png')}
+              width={250}
+              height={0}
+            />
+          </Link>
+          </Box>
           <Box
             sx={{
               flexGrow: 1,

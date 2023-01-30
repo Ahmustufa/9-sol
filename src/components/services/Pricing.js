@@ -60,7 +60,7 @@ const Pricing = (props) => {
           container
           // gap={{ lg: 5, md: 3, sm: 2 }}
           // columnGap={3}
-          columns={{ md: 7, lg: 10, sm: 6, xs: 3, xl: 12 }}
+          columns={{ md: 7, lg: 12, sm: 5, xs: 8, xl: 12 }}
           // columnSpacing={3}
           // rowSpacing={3}
           spacing={4}
@@ -74,11 +74,11 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
-                      xs={4}
+                      xs={7}
                       xl={2.5}
                       lg={3.5}
                       md={3}
-                      sm={4}
+                      sm={3}
                       px={2}
                       className="rounded-lg"
                     >
@@ -658,6 +658,10 @@ const Row = styled(Grid)`
   display: flex;
   /* align-items: center; */
   justify-content: center;
+  @media (max-width: 594px) {
+    margin-left: -18px !important;    
+  }
+
 `;
 const Service = styled.div`
   display: flex;
