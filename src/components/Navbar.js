@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
     <AppBar
       position="sticky"
       // className="bg-white"
-      style={{ backgroundColor: "white" }}
+      style={{ backgroundColor: "white", zIndex: 2 }}
       elevation={0}
     >
       <Header />
@@ -96,7 +96,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            // href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -108,7 +108,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <Image/>
+            <Image  src={require=('/public/images/logo/9Sol.png')} width={100} height={100}/>
           </Text>
           <Box
             sx={{

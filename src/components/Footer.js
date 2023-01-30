@@ -105,6 +105,12 @@ const Footer = () => {
           <Bounce style={{paddingRight: "20px"}}>
             <RxDoubleArrowRight color="white"  />
           </Bounce>
+          <Link href='/'>Home</Link>
+          </div>
+          <div style={{display: "flex", alignItems: "center"}} >
+          <Bounce style={{paddingRight: "20px"}}>
+            <RxDoubleArrowRight color="white"  />
+          </Bounce>
           <Link href='/aboutus'>About</Link>
           </div>
           <div style={{display: "flex", alignItems: "center"}} >

@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
+import SideBar from "@/components/form/SideBar";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -100,6 +101,7 @@ export default function App({ Component, pageProps }) {
         </noscript>
       </Head>
       <Layout>
+        <SideBar/>
         <Component {...pageProps} />
       </Layout>
     </>

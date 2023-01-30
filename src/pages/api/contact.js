@@ -37,11 +37,11 @@ export default function (req, res) {
                           <p style="color:#61045f; margin: 0 12px;"> 
                             <strong>Business Development</strong>
                             <p style="font-size: small; color: #000; margin: 2px;"> 
-                                <strong style="color: #61045f;">a:</strong>  9 Solutions | Shop no 25, Jason terrace Clifton block 2, Karachi.
+                                <strong style="color: #61045f;">a:</strong>  9 Solutions | 651 N Broad St, Suite 201, Middletown, 19709, NewCastle, Delaware.
                             </p>
                             <p style= "font-size: small; color: #000; margin: 2px;"> 
                                 <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:management@9solutions.co"  style="color:#61045f; text-decoration: underline;">management@9solutions.co</a>
-                                | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
+                                | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:#61045f; text-decoration: underline;">www.9solutions.co</a>
                             </p>
                              <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
                                 <strong style="color: #61045f;">p:</strong> +1 (650) 6819645 

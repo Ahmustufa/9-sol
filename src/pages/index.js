@@ -10,7 +10,7 @@ import { Fade } from "react-awesome-reveal";
 import OurDesigns from "@/components/ourDesigns/OurDesigns";
 import PricingCards from "@/components/services/PricingCards";
 const Process = dynamic(() => import("../components/process/index"));
-
+const ContactInfo = dynamic(()=> import ('../components/contactinfo/index'))
 // import { Alert } from "@mui/material";
 
 const Home = () => {
@@ -42,6 +42,7 @@ const Home = () => {
       </div>
       {/* <PricingCards/> */}
       <Process />
+      <ContactInfo/>
     </>
   );
 };
