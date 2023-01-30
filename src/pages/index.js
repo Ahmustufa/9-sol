@@ -10,7 +10,7 @@ import { Fade } from "react-awesome-reveal";
 import OurDesigns from "@/components/ourDesigns/OurDesigns";
 import PricingCards from "@/components/services/PricingCards";
 const Process = dynamic(() => import("../components/process/index"));
-const ContactInfo = dynamic(()=> import ('../components/contactinfo/index'))
+const ContactInfo = dynamic(() => import("../components/contactinfo/index"));
 // import { Alert } from "@mui/material";
 
 const Home = () => {
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
       {/* <PricingCards/> */}
       <Process />
-      <ContactInfo/>
+      <ContactInfo />
     </>
   );
 };
@@ -58,7 +58,7 @@ export async function getServerSideProps(context) {
         keywords:
           "Custom Mobile App Development Agency &amp; Mobile Application Design Services in USA | Mobile Application Development Company",
         publishTime: new Date().toISOString(),
-        // image: `${process.env.eforte_blog_url}/uploads/eForte_icon.png`,
+        // image: `${process.env.9solutions_blog_url}/uploads/9solutions_icon.png`,
       },
     },
   };

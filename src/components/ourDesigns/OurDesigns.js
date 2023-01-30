@@ -133,7 +133,7 @@ const OurDesigns = (props) => {
         <Box>
           {/* sadsa */}
           {/* <Image alt="img" src={modalState.imgSrc}  /> */}
-          </Box>
+        </Box>
       </Modal>
 
       <StyledSection className="container-fluid">
@@ -174,7 +174,7 @@ const OurDesigns = (props) => {
                   key={index}
                   className="product-names"
                   style={{
-                    color: category === item.label ? "#ed3c69" : "#898989",
+                    color: category === item.label ? "#aa076b" : "#898989",
                     backgroundColor:
                       category === item.label ? "#F3F3F4" : "#fff",
                     borderRadius: category === item.label ? 6 : 6,

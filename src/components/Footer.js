@@ -145,9 +145,9 @@ const Footer = () => {
             </span>
             | All rights reserved.
             <span style={{ fontWeight: 600 }} className="px-2">
-              <Link href="term_of_use">Terms and Conditions</Link>
+              <Link href="/term-of-use">Terms and Conditions</Link>
 
-              <Link href="/privacy_policy" className="px-2">
+              <Link href="/privacy-policy" className="px-2">
                 Privacy Policy
               </Link>
             </span>

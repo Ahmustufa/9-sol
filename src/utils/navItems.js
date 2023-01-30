@@ -18,20 +18,20 @@ export const items = [
   },
   {
     id: 3,
+    title: "Services",
+    to: "/services",
+    icon: <LocalOfferOutlinedIcon />,
+  },
+  {
+    id: 4,
     title: "Blogs",
     to: "/blogs",
     icon: <BookOutlinedIcon />,
   },
   {
-    id: 4,
+    id: 5,
     title: "Contact",
     to: "/contactus",
     icon: <ContactMailOutlinedIcon />,
-  },
-  {
-    id: 5,
-    title: "Services",
-    to: "/services",
-    icon: <LocalOfferOutlinedIcon />,
   },
 ];

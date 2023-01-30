@@ -3,7 +3,6 @@ import HeroSection from "@/components/heroSection";
 // import Head from "next/head";
 import styled from "styled-components";
 import { Fade, Bounce, Zoom } from "react-awesome-reveal";
-// import AboutUsProcess from "../src/component/process/aboutUsProcess";
 const Process = dynamic(() => import("../../components/process/index"));
 
 import {
@@ -13,7 +12,7 @@ import {
   vision,
   businessDashboard,
 } from "/public";
-import Heading from "@/components/Title/Heading";
+// import Heading from "@/components/Title/Heading";
 const StyledDiv = styled.div`
   .main-heading {
     color: #fff;
@@ -28,7 +27,7 @@ const StyledDiv = styled.div`
     height: 6px;
     width: 40%;
     margin: 20px auto;
-    background-color: #ed3c69;
+    background-color: #aa076b;
     border-radius: 4px;
   }
 
@@ -121,7 +120,7 @@ const AboutUs = () => {
             </h2>
           }
         />
-        
+
         <div className="content-card-container">
           <div className="content-card">
             <div className="content-card-upper">
@@ -139,36 +138,38 @@ const AboutUs = () => {
                 <h3 className="card-heading">Business Description</h3>
                 <br />
                 <p className="para">
-                  eForte was established in 2013 as a software development and technology
-                  solutions firm for it being the best way to gain and share knowledge for
-                  transforming lives and making progress.
+                  9solutions was established in 2013 as a software development
+                  and technology solutions firm for it being the best way to
+                  gain and share knowledge for transforming lives and making
+                  progress.
                 </p>
                 <br />
                 <p className="para">
-                  The small initiative is now 40+ strong and during this time we have not
-                  only mastered range of web software development frameworks but we have
-                  become highly proficient in speaking the language of business to
-                  accommodate our partners.
+                  The small initiative is now 40+ strong and during this time we
+                  have not only mastered range of web software development
+                  frameworks but we have become highly proficient in speaking
+                  the language of business to accommodate our partners.
                 </p>
                 <br />
                 <p className="para">
-                  In the spirit of constant improvement, we have transformed from Agile
-                  masters to Scrum experts. We are now able to give back to community by
-                  sharing our knowledge and expertise.
+                  In the spirit of constant improvement, we have transformed
+                  from Agile masters to Scrum experts. We are now able to give
+                  back to community by sharing our knowledge and expertise.
                 </p>
                 <br />
                 <p className="para">
-                  We do have open space environment for our Scrum teams to function
-                  properly but to keep their focus we have introduced a system as simple
-                  as it is effective: Full focus, one Team, one Client.
+                  We do have open space environment for our Scrum teams to
+                  function properly but to keep their focus we have introduced a
+                  system as simple as it is effective: Full focus, one Team, one
+                  Client.
                 </p>
                 <br />
                 <p className="para">
                   Our dedication to transparency, constant feedback, programming
-                  excellence and innovative approach towards solving problems and
-                  providing solutions has been recognized by our long-term technology
-                  partners. We hope that you will soon join their ranks and discover the
-                  sheer joy of working with eForte.
+                  excellence and innovative approach towards solving problems
+                  and providing solutions has been recognized by our long-term
+                  technology partners. We hope that you will soon join their
+                  ranks and discover the sheer joy of working with 9solutions.
                 </p>
                 <br />
               </Fade>
@@ -185,12 +186,15 @@ const AboutUs = () => {
               <Fade triggerOnce direction="up" cascade damping={0.2}>
                 <h3 className="card-heading">Vision Statement</h3>
                 <p style={{ padding: "0px 20%" }} className="para">
-                  Our vision is to be at the forefront in providing technological
-                  solutions to ease apprehension in human life.
+                  Our vision is to be at the forefront in providing
+                  technological solutions to ease apprehension in human life.
                 </p>
               </Fade>
               <Zoom triggerOnce>
-                <p style={{ marginTop: "4%", fontWeight: 600 }} className="para">
+                <p
+                  style={{ marginTop: "4%", fontWeight: 600 }}
+                  className="para"
+                >
                   To follow our vision, our mission statement is:
                 </p>
               </Zoom>
@@ -207,8 +211,8 @@ const AboutUs = () => {
               <Fade triggerOnce direction="up" cascade damping={0.2}>
                 <h3 className="card-heading">Mission Statement</h3>
                 <p style={{ padding: "0px 20%" }} className="para">
-                  We provide outstanding tech solutions and unparalleled service that,
-                  combined, deliver premium value to our customers.
+                  We provide outstanding tech solutions and unparalleled service
+                  that, combined, deliver premium value to our customers.
                 </p>
               </Fade>
             </div>
@@ -222,7 +226,7 @@ const AboutUs = () => {
                   style={{ marginBottom: "2%" }}
                 />
                 <h3 className="card-heading">
-                  eForte has following brand essence, attributes and values:
+                  9solutions has following brand essence, attributes and values:
                 </h3>
               </Zoom>
 
@@ -241,7 +245,7 @@ const AboutUs = () => {
               <Zoom triggerOnce>
                 <h3 className="card-heading mt-5">Company Values</h3>
               </Zoom>
-          <Process/>
+              <Process />
             </div>
           </div>
         </div>
@@ -256,9 +260,10 @@ export async function getServerSideProps(context) {
   return {
     props: {
       metaData: {
-        title: "A Complete Overview Of Eforte",
-        description: "All About eforte | Integrity | Client Satisfaction | Quality",
-        keywords: "A Complete Overview Of Eforte",
+        title: "A Complete Overview Of 9solutions",
+        description:
+          "All About 9solutions | Integrity | Client Satisfaction | Quality",
+        keywords: "A Complete Overview Of 9solutions",
         publishTime: new Date().toISOString(),
       },
     },

@@ -51,7 +51,7 @@ const StyledDiv = styled.div`
     background-color: #61045f;
     transition: all 0.3s ease-in-out;
     z-index: 1;
-    box-shadow: 0px 0px 15px #ed3c69;
+    box-shadow: 0px 0px 15px #aa076b;
   }
 
   .dots-background {
@@ -167,7 +167,7 @@ const steps = [
           <li>Work-plan Milestones Delivery Schedule</li>
           <li>Software Test Plan document</li>
         </ul>
-        With the outcome of this phase eForte and Client's expectations are
+        With the outcome of this phase 9solutions and Client's expectations are
         matched for the outcome of the Development phase.
       </>
     ),
@@ -176,7 +176,7 @@ const steps = [
   {
     title: "Milestones",
     heading: "Milestones - Scrum Development",
-    para: `During the software development phase of the App, the development is done with respect to the Workplan Milestone Delivery schedule. We work according to the Agile- Scrum methodology, being in connection with Client's Product Owner via eForte Project Manager for weekly/Bi-weekly meetings along with the Dev and Design team. We make use of Git repos and DTAP (Dev, Testing, Acceptance, Production) DevOps pipelines.`,
+    para: `During the software development phase of the App, the development is done with respect to the Workplan Milestone Delivery schedule. We work according to the Agile- Scrum methodology, being in connection with Client's Product Owner via 9solutions Project Manager for weekly/Bi-weekly meetings along with the Dev and Design team. We make use of Git repos and DTAP (Dev, Testing, Acceptance, Production) DevOps pipelines.`,
     image: process4,
   },
   {
@@ -232,7 +232,17 @@ const Process = ({ type, size }) => {
       </Fade>
 
       <Grid container>
-        <Grid item xs={0} sx={{ display: { xs: "none", md: "block", lg: "block", xl: "block" }}} sm={12} md={12} lg={12} xl={12} >
+        <Grid
+          item
+          xs={0}
+          sx={{
+            display: { xs: "none", md: "block", lg: "block", xl: "block" },
+          }}
+          sm={12}
+          md={12}
+          lg={12}
+          xl={12}
+        >
           <div
             ref={myref}
             className="dots-container"
@@ -286,7 +296,7 @@ const Process = ({ type, size }) => {
           </div>
         </Grid>
 
-        <Grid item xs={12} mt={4} >
+        <Grid item xs={12} mt={4}>
           <div className="solutions-heading  align-items-center">
             <HiChevronDoubleLeft
               className="arrow-icon"
@@ -316,7 +326,7 @@ const Process = ({ type, size }) => {
           <>
             {index == value && (
               <>
-                <Grid item  xl={8} lg={8} md={8} sm={12} xs={12}>
+                <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
                   <Fade triggerOnce duration={1300} damping={0.2}>
                     <div className="above-slider-div">
                       <h2 className="d-none d-sm-none d-md-block">
@@ -328,7 +338,6 @@ const Process = ({ type, size }) => {
                 </Grid>
                 <Grid
                   item
-                  
                   xl={4}
                   lg={4}
                   md={4}

@@ -4,9 +4,9 @@ import { Button } from "@mui/material";
 
 export const BlueButtonWrapper = styled(Button)`
   margin: 0;
-  color: ${(props) => props.color ?? "#ed3c69"};
+  color: ${(props) => props.color ?? "#aa076b"};
   background-color: ${(props) => props.backgroundColor ?? "#fff"};
-  border: ${(props) => props.border ?? "2px solid #ed3c69"};
+  border: ${(props) => props.border ?? "2px solid #aa076b"};
   border-radius: ${(props) => props.borderRadius ?? "4px"};
   outline: none;
   box-shadow: none;
@@ -29,15 +29,15 @@ export const BlueButtonWrapper = styled(Button)`
 
   &:focus {
     color: ${(props) => props.color ?? "#fff"};
-    background-color: ${(props) => props.backgroundColor ?? "#ed3c69"};
-    border: ${(props) => props.border ?? "2px solid #ed3c69"};
+    background-color: ${(props) => props.backgroundColor ?? "#aa076b"};
+    border: ${(props) => props.border ?? "2px solid #aa076b"};
   }
 
   &:hover {
     opacity: 0.8;
     background-color: ${(props) => props.hoverBackgroundColor ?? "#fff"};
-    border: ${(props) => props.border ?? "2px solid #ed3c69"};
-    color: ${(props) => props.hoverColor ?? "#ed3c69"};
+    border: ${(props) => props.border ?? "2px solid #aa076b"};
+    color: ${(props) => props.hoverColor ?? "#aa076b"};
     // font-weight: ${(props) => props.fontWeight ?? "500"};
   }
 `;
@@ -45,8 +45,8 @@ export const BlueButtonWrapper = styled(Button)`
 export const SignupButtonWrapper = styled.button`
   margin: 0;
   color: ${(props) => props.color ?? "#fff"};
-  background-color: ${(props) => props.backgroundColor ?? "#ed3c69"};
-  border: ${(props) => props.border ?? "2px solid #ed3c69"};
+  background-color: ${(props) => props.backgroundColor ?? "#aa076b"};
+  border: ${(props) => props.border ?? "2px solid #aa076b"};
   border-radius: 100px;
   padding: 6px 12px;
   width: ${(props) => props.width ?? "200px"};
@@ -70,17 +70,17 @@ export const SignupButtonWrapper = styled.button`
 
   &:focus {
     color: ${(props) => props.color ?? "#fff"};
-    background-color: ${(props) => props.backgroundColor ?? "#ed3c69"};
-    border: ${(props) => props.border ?? "2px solid #ed3c69"};
+    background-color: ${(props) => props.backgroundColor ?? "#aa076b"};
+    border: ${(props) => props.border ?? "2px solid #aa076b"};
   }
 
   &:hover {
     opacity: 0.8;
     background-color: ${(props) => props.hoverBackgroundColor ?? "#fff"};
-    border: ${(props) => props.border ?? "2px solid #ed3c69"};
-    color: ${(props) => props.hoverColor ?? "#ed3c69"};
+    border: ${(props) => props.border ?? "2px solid #aa076b"};
+    color: ${(props) => props.hoverColor ?? "#aa076b"};
     color: ${(props) =>
-      props.hoverColor != "#f4f4f4" ? "#ed3c69" : "#21262C"};
+      props.hoverColor != "#f4f4f4" ? "#aa076b" : "#21262C"};
     // font-weight: ${(props) => props.fontWeight ?? "500"};
   }
 
@@ -112,7 +112,7 @@ export const InsideSignupButton = styled.button`
   align-items: center;
   justify-content: center;
   transform: rotate(90deg);
-  color: #ed3c69;
+  color: #aa076b;
 `;
 
 export const HeaderLink = styled.a`

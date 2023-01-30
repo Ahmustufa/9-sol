@@ -54,7 +54,7 @@ const StyledSection = styled.section`
       height: 6px;
       width: 25%;
       margin: 20px auto;
-      background-color: #ed3c69;
+      background-color: #aa076b;
       border-radius: 4px;
     }
 
@@ -138,7 +138,7 @@ const HeroSection = (props) => {
   const handleDone = () => {
     // console.log(`Done after 5 loops!`);
   };
-  
+
   return (
     <StyledSection>
       <img
@@ -154,18 +154,20 @@ const HeroSection = (props) => {
           ) : (
             <div>
               <h1 className="main-heading">
-              <Typewriter
-                    words={["We're Your One-Stop Solution for Efficient Apps Development"]}
-                    loop={2}
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={80}
-                    cursorColor="#aa076b"
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-                    onLoopDone={handleDone}
-                    onType={handleType}
-                  />
+                <Typewriter
+                  words={[
+                    "We're Your One-Stop Solution for Efficient Apps Development",
+                  ]}
+                  loop={2}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={80}
+                  cursorColor="#aa076b"
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                  onLoopDone={handleDone}
+                  onType={handleType}
+                />
                 {/* <BotTypeWriter
                   content={
                     props.typeWriterContent
@@ -180,9 +182,10 @@ const HeroSection = (props) => {
                     props.subTitleContent
                   ) : (
                     <>
-                      Searching for guaranteed ways to develop your business App idea?
-                      <br /> Getting yourself a professional team work by the experts at
-                      eForte is what you need.
+                      Searching for guaranteed ways to develop your business App
+                      idea?
+                      <br /> Getting yourself a professional team work by the
+                      experts at 9solutions is what you need.
                     </>
                   )}
                 </h2>
@@ -196,7 +199,7 @@ const HeroSection = (props) => {
               <Grid item xs={12}>
                 <div>
                   <Slider {...settings_3}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item,index) => (
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
                       <div key={index}>
                         <img
                           layout="fill"

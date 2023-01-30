@@ -47,16 +47,16 @@ export default function (req, res) {
                                 <strong style="color: #61045f;">p:</strong> +1 (650) 6819645 
                              </p>
                             <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                              <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
+                              <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                             </a>
                             <a href="https://twitter.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                              <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/twitter_ucracw.png" width="17px" height='17px' />
+                              <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/twitter_ucracw.png" width="17px" height='17px' />
                             </a>
                             <a href="https://www.linkedin.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                              <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/linkedin_r1qwpo.png" width="17px" height='17px' />
+                              <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/linkedin_r1qwpo.png" width="17px" height='17px' />
                             </a>
                             <a href="https://www.instagram.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                              <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/instagram_gakagk.png" width="17px" height='17px' />
+                              <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/instagram_gakagk.png" width="17px" height='17px' />
                             </a>
                           </p>
                     </td>
@@ -103,16 +103,16 @@ export default function (req, res) {
                           <strong style="color: #61045f;">p:</strong>  +1 (650) 6819645 
                        </p>
                       <a href="https://www.facebook.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                        <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
+                        <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/facebook_ekglz7.png" width="17px" height='17px' />
                       </a>
                       <a href="https://twitter.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                        <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/twitter_ucracw.png" width="17px" height='17px' />
+                        <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/twitter_ucracw.png" width="17px" height='17px' />
                       </a>
                       <a href="https://www.linkedin.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                        <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/linkedin_r1qwpo.png" width="17px" height='17px' />
+                        <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/linkedin_r1qwpo.png" width="17px" height='17px' />
                       </a>
                       <a href="https://www.instagram.com/" target="blank" style="text-decoration: none; padding: 2px;"> 
-                        <img src="https://res.cloudinary.com/eforte/image/upload/v1638875372/social_icons/instagram_gakagk.png" width="17px" height='17px' />
+                        <img src="https://res.cloudinary.com/9solutions/image/upload/v1638875372/social_icons/instagram_gakagk.png" width="17px" height='17px' />
                       </a>
                     </p>
               </td>
