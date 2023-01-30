@@ -1,10 +1,9 @@
 import { Alert, Box, Button, Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
-import Text from "../Typography/Text";
 import styled from "styled-components";
+import Text from "../Typography/Text";
 import BlackButton from "../buttons/BlackButton";
 import Snackbar from "@mui/material/Snackbar";
-import Slide from "@mui/material/Slide";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useForm, Controller } from "react-hook-form";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
