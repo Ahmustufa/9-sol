@@ -99,7 +99,7 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid item xs={2}>
-          <Box display="flex">
+          <Box display="flex" >
 
         <Text variant="h6" className="text-white mb-2 text-center p-5">Menu</Text>
           </Box>
@@ -138,7 +138,7 @@ const Footer = () => {
         </Grid>
         <Grid item xl={6} lg={6} sx={{display: {xl: "flex", lg: "flex", md: "none", sm: "none", xs: "none"}, justifyContent: "end"}}>
         <Ripple>
-          <Image src={require('/public/images/mobile/VR.png')} height={400} />
+          <Image src={require('/public/images/mobile/VR.png')} height={350} />
         </Ripple>
       
         </Grid>

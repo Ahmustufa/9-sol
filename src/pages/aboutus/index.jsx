@@ -245,10 +245,10 @@ const AboutUs = () => {
               <Zoom triggerOnce>
                 <h3 className="card-heading mt-5">Company Values</h3>
               </Zoom>
-              <Process />
             </div>
           </div>
         </div>
+              <Process />
       </StyledDiv>
     </>
   );

@@ -7,7 +7,8 @@ const Ripple = (props) => {
 
 export default Ripple;
 const Ripples = styled.div`
-  animation: pulse 1s infinite ease;
+  animation: pulse 2s infinite ease;
+  /* animation-duration: 3s; */
   transition: 0.5s;
   @keyframes pulse {
     0% {
