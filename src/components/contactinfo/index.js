@@ -42,7 +42,15 @@ const StyledDiv = styled.div`
     }
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 896px) {
+    .h-text {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 738px) {
+    .h-text {
+      font-size: 14px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -54,7 +62,7 @@ const StyledDiv = styled.div`
       text-align: left;
     }
     .row {
-      display: block;
+      display: flex;
       .col {
         margin-bottom: 12px;
         justify-content: start;
@@ -87,7 +95,7 @@ const ContactInfo = (props) => {
         </p>
       </Fade>
       <Grid container className="row">
-        <Grid item xs={6} className="col">
+        <Grid item  xs={6} className="col">
           <Bounce triggerOnce duration={1300}>
             <img alt="toll-free" src={tollFreeImg} style={{ height: 50, width: 50 }} />
           </Bounce>
@@ -95,13 +103,13 @@ const ContactInfo = (props) => {
             <Fade triggerOnce cascade>
               <h6>Toll Free</h6>
               <h6>
-                <a href="tel:+16506819645">+1 (650) 681-9645</a>
+                <a href="tel:+16506819645" className="h-text">+1 (650) 681-9645</a>
               </h6>
             </Fade>
           </div>
         </Grid>
 
-        <Grid xs={6} className="col">
+        <Grid item xs={6} className="col">
           <Bounce triggerOnce duration={1300}>
             <img
               alt="request-calling"
@@ -113,7 +121,7 @@ const ContactInfo = (props) => {
             <Fade triggerOnce cascade>
               <h6>Request</h6>
               <h5>
-                <a href="tel:+16506819645">Call Back</a>
+                <a href="tel:+16506819645" className="h-text">Call Back</a>
               </h5>
             </Fade>
           </div>

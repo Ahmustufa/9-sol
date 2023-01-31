@@ -6,10 +6,10 @@ import Image from "next/image";
 import BlackButton from "@/components/buttons/BlackButton";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Typewriter } from "react-simple-typewriter";
-import Snackbar from '@mui/material/Snackbar';
-import Slide from '@mui/material/Slide';
+import Snackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
+import styled from "styled-components";
 const Intro = () => {
-  
   const handleType = (count) => {
     // console.log(count);
   };
@@ -19,7 +19,7 @@ const Intro = () => {
   };
   return (
     <Grid container p={3}>
-      <Grid item xs={12} xl={8} lg={8} md={8} sm={12}>
+      <Grid item xs={12} xl={6} lg={6} md={6} sm={12}>
         <Stack spacing={2} display="flex">
           <Grid container>
             <Grid
@@ -71,7 +71,15 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={12} sm={12} xl={8} lg={8} md={10} className="flex justify-center">
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              xl={8}
+              lg={8}
+              md={10}
+              className="flex justify-center"
+            >
               <Text fontSize={18} className="break-words">
                 Making a mark in today's online world is a crucial element of
                 marketing. Since the world has started to enjoy better results
@@ -94,7 +102,15 @@ const Intro = () => {
                 },
               }}
             ></Grid>
-            <Grid item xs={12} xl={6} lg={6} md={8} sm={12} className="flex flex-col">
+            <Grid
+              item
+              xs={12}
+              xl={6}
+              lg={6}
+              md={8}
+              sm={12}
+              className="flex flex-col"
+            >
               <Stack spacing={1}>
                 <div className="flex items-center ">
                   <span className="pr-2">
@@ -190,9 +206,9 @@ const Intro = () => {
       </Grid>
       <Grid
         item
-        xs={4}
+        xs={6}
         sx={{
-          justifyContent: "center",
+          justifyContent: "end",
           display: {
             xl: "flex",
             lg: "flex",
@@ -202,10 +218,33 @@ const Intro = () => {
           },
         }}
       >
-        <ContactForm />
+        {/* <ContactForm /> */}
+        <Div>
+          <Image
+            className="image"
+            src={require("/public/images/mobile/mobile3.webp")}
+          />
+          <Image className="image" src={require("/public/images/mobile/mobile1.webp")} />
+        </Div>
       </Grid>
     </Grid>
   );
 };
 
 export default Intro;
+
+const Div = styled.div`
+display: flex;
+/* justify-content: end; */
+width: fit-content;
+@media (max-width: 1186px) {
+  .image{
+    width: 250px;
+  }
+}
+@media (max-width: 984px) {
+  .image{
+    width: 200px;
+  }
+}
+`;

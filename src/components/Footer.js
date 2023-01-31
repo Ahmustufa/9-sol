@@ -8,6 +8,9 @@ import Link from "next/link";
 import Text from "./Typography/Text";
 import {RxDoubleArrowRight} from 'react-icons/rx'
 import Bounce from "./animation/Bounce";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import Ripple from "./animation/Ripple";
 const FooterContent2Div = styled.div`
   background-color: #232a38;
   padding: 16px 8%;
@@ -71,7 +74,7 @@ const Footer = () => {
   return (
     <FooterContent2Div>
       <Grid container mb={5}>
-        <Grid item xs={4}>
+        <Grid item xl={4} lg={4} md={6} sm={8} xs={12}>
           {/* <Box> */}
           <Link href="/">
           <Image
@@ -82,13 +85,13 @@ const Footer = () => {
           {/* </Box> */}
           <Stack spacing={2}>
             <div className="flex px-6 items-center">
-              <AiOutlinePhone fontSize={30} color="white" />
+              <PhoneIcon sx={{fontSize: "20px", color: "white"}} />
               <a className="text-white px-2" href="tel:+16506819645">
                 +1-(650) 681-9645
               </a>
             </div>
             <div className="flex px-6 items-center">
-              <AiOutlineMail fontSize={30} color="white" />
+              <EmailIcon sx={{fontSize: "20px", color: "white"}} />
               <a className="text-white px-2" href="mailto:management@9solutions.com">
                 management@9solutions.com
               </a>
@@ -132,6 +135,12 @@ const Footer = () => {
           <Link href='/services'>Services</Link>
           </div>
           </Stack>
+        </Grid>
+        <Grid item xl={6} lg={6} sx={{display: {xl: "flex", lg: "flex", md: "none", sm: "none", xs: "none"}, justifyContent: "end"}}>
+        <Ripple>
+          <Image src={require('/public/images/mobile/VR.png')} height={400} />
+        </Ripple>
+      
         </Grid>
       </Grid>
       <Grid container className="main-row">

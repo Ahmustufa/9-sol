@@ -162,6 +162,16 @@ const StyledSection = styled.section`
       width: 100%;
     }
   }
+  @media (max-width: 1522px) {
+    .twoLineList li {
+      width: 100%;
+    }
+  }
+  @media (max-width: 762px) {
+    .twoLineList li {
+      width: 100%;
+    }
+  }
 
   @media (max-width: 1200px) {
     .solution-option {
@@ -221,7 +231,7 @@ const WebSolutions = () => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={0} xl={0} sx={{display: { md: "block", sm: "block", xs: "block", lg: "none", xl: "none"}}}>
+          <Grid item xs={12} sm={12} md={12}  sx={{display: { md: "flex", sm: "flex", xs: "flex", lg: "none", xl: "none"}}}>
             <div className="solutions-heading flex items-center">
               <HiChevronDoubleLeft
                 style={{ opacity: solution == 0 ? 0.3 : 1 }}
@@ -264,7 +274,7 @@ const WebSolutions = () => {
               {solutions[solution].description}
             </p>
             <div className="twoLineList">
-              <ul>
+              <ul style={{listStyle: "outside"}}>
                 {solutions[solution].list.map((listItem) => (
                   <li>{`${listItem}`}</li>
                 ))}
@@ -272,7 +282,7 @@ const WebSolutions = () => {
             </div>
           </Grid>
 
-          <Grid item xs={5.5} className="text-center mx-auto">
+          <Grid item xl={5.5} lg={5.5} md={12} sm={12} xs={12} className="text-center mx-auto">
             <img
               alt="web-solution"
               src={`/images/web-solutions/ws_image_${solution + 1}.png`}

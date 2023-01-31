@@ -8,9 +8,9 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useForm, Controller } from "react-hook-form";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
-import PhoneInputWrapper from "../inputs/phoneInputWrapper";
-const ContactForm = () => {
+import CancelIcon from "@mui/icons-material/Cancel";
+
+const ContactForm = (props) => {
   const [initState, setInitState] = React.useState({
     loading: false,
     success: false,
@@ -46,7 +46,6 @@ const ContactForm = () => {
         if (res.status === 200) {
           setInitState({ ...initState, loading: false, success: true });
           setToast({ ...toast, open: true });
-   
         } else {
           setLoading(false);
         }
@@ -89,8 +88,18 @@ const ContactForm = () => {
         className="p-6 border-gray-dark rounded-xl"
       >
         <Stack spacing={1}>
-          <Text fontWeight="bold" fontSize={32}>
-            Chat with us to Avail <br /> 50% off
+          <span
+            style={{
+              marginLeft: "auto",
+            }}
+          >
+            <CancelIcon style={{ fontSize: "35px" }} onClick={props.handleClose} />
+          </span>
+          <Text fontWeight="bold" fontSize={24} color={props.color}>
+            {props.text}
+          </Text>
+          <Text fontWeight="bold" fontSize={20}>
+            {props.subtext}
           </Text>
           {errors.fullName && (
             <p style={{ color: "red", fontSize: 12 }}>
@@ -207,7 +216,7 @@ const ContactForm = () => {
 export default ContactForm;
 const Input = styled(TextField)`
   .MuiOutlinedInput-notchedOutline {
-    border-color: black !important;
+    border-color: grey !important;
   }
   .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: #aa076b !important;
@@ -228,5 +237,5 @@ const PhoneField = styled(PhoneInput)`
   }
   padding: 20px;
   border-radius: 5px;
-  border: 1.2px solid black;
+  border: 1.2px solid grey;
 `;
