@@ -231,7 +231,7 @@ const WebSolutions = () => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12}  sx={{display: { md: "flex", sm: "flex", xs: "flex", lg: "none", xl: "none"}}}>
+          <Grid item xs={12} sm={12} md={12} justifyContent="center" sx={{display: { md: "flex", sm: "flex", xs: "flex", lg: "none", xl: "none"}}}>
             <div className="solutions-heading flex items-center">
               <HiChevronDoubleLeft
                 style={{ opacity: solution == 0 ? 0.3 : 1 }}
