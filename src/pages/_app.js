@@ -49,30 +49,33 @@ export default function App({ Component, pageProps }) {
         {/* <script async src="build/react.js" /> */}
         <script async src="https://www.google.com/recaptcha/api.js" />
         {/* <script async src="build/index.js" /> */}
-        <script
+        {/* <script
           type="text/javascript"
           src="https://2pay-js.2checkout.com/v1/2pay.js"
           async
-        />
+        /> */}
         <script
-          // strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-0D4QW9HQDE`}
           async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MDE9VVJHKV"
         />
         <script
           // strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0D4QW9HQDE', {
-              page_path: window.location.pathname,
-            });
+        function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+        gtag('config', 'G-MDE9VVJHKV')
           `,
           }}
         />
+{/* <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
 
+  gtag('config', 'G-MDE9VVJHKV');
+</script> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `!function(q,e,v,n,t,s){if(q.qp) return; 
@@ -101,7 +104,7 @@ export default function App({ Component, pageProps }) {
         </noscript>
       </Head>
       <Layout>
-        <SideBar/>
+        <SideBar />
         <Component {...pageProps} />
       </Layout>
     </>
