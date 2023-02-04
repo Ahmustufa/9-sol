@@ -74,7 +74,7 @@ const Footer = () => {
   return (
     <FooterContent2Div>
       <Grid container mb={5}>
-        <Grid item xl={4} lg={4} md={6} sm={8} xs={8}>
+        <Grid item xl={4} lg={4} md={6} sm={10} xs={10} sx={{display: {sm: {justifyContent: "center"}}}}>
           {/* <Box> */}
           <Link href="/">
             <Image
@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
           </Stack>
         </Grid>
-        <Grid item xl={2} lg={2} md={6} sm={4} xs={2}>
+        <Grid item xl={2} lg={2} md={6} sm={4} xs={6}>
           <Box display="flex">
             <Text variant="h6" className="text-white mb-2 text-center p-5">
               Menu

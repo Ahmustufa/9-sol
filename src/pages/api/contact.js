@@ -74,8 +74,8 @@ export default function (req, res) {
         <tr>
           <td style="font-family: Arial, Helvetica, sans-serif; padding: 20px 0 0 0;">
             <p style="margin: 0;">Thankyou for your interest in 9Solutions</p>
-            <p style="margin-top: 15px;">Our team will be in coordination with you shortly</p>
-            <p style="margin-top: 30px;">To learn more about 9 Solutions, please visit our website at <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a></p>
+            <p style="margin-top: 15px;">Our team will be in coordination with you shortly.</p>
+            <p style="margin-top: 30px;">To learn more about 9 Solutions, please visit our website at <a class="fa" href="https://www.9solutions.co" target="blank" style="color:#61045f; text-decoration: underline;">www.9solutions.co</a></p>
           </td>
         </tr>
       </table>
@@ -96,8 +96,8 @@ export default function (req, res) {
                           <strong style="color: #61045f;">a:</strong>  9 Solutions | 651 N Broad St, Suite 201, Middletown, 19709, NewCastle, Delaware.
                       </p>
                       <p style= "font-size: small; color: #000; margin: 2px;"> 
-                          <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:management@9solutions.co"  style="color:darkgreen; text-decoration: underline;">management@9solutions.co</a>
-                          | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:darkgreen; text-decoration: underline;">www.9solutions.co</a>
+                          <strong style="color: #61045f;">e:</strong> <a class="fa" href="mailto:management@9solutions.co"  style="color:#61045f; text-decoration: underline;">management@9solutions.co</a>
+                          | <strong  style="color: #61045f;">w:</strong> <a class="fa" href="https://www.9solutions.co" target="blank" style="color:#61045f; text-decoration: underline;">www.9solutions.co</a>
                       </p>
                        <p style="font-size: small; color: #000; margin: 2px; padding-bottom: 5px;"> 
                           <strong style="color: #61045f;">p:</strong>  +1 (650) 6819645 
@@ -125,8 +125,9 @@ export default function (req, res) {
   try {
     const transporter = nodemailer.createTransport({
       //   host: "smtp.gmail.com",
-      service: "Zoho",
-      //   port: 465,
+      service: "Outlook365",
+      host: "smtp.office365.com",
+      port: 587,
       //   ssl: false,
       tls: {
         rejectUnauthorized: false,
@@ -141,7 +142,7 @@ export default function (req, res) {
       {
         from: process.env.forwarding_email, // sender address
         to: process.env.admin_email, // list of receivers
-        subject: "Request for contact from user at 9Solutions", // Subject line
+        subject: `Request for contact from ${req.body.fullName} at 9Solutions`, // Subject line
         // text: "From 9 Solutions", // plain text body
         html: htmlSendToAdmin, // html body
       },

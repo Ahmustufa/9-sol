@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
 
         <title>{pageProps?.metaData?.title}</title>
 
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon1.png" />
         <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
