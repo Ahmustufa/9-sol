@@ -34,7 +34,7 @@ const solutions = [
     subHeading: `Make your website do more with on-the-go Content Management System`,
     description: `With use of our CMS you get an edge in controlling the content of your website the 
     way you want when you want. With the use of latest in the technology landscape 
-    LogiLogos platform gives you the flexibility to edit, modify, change, delete and 
+    9Solutions platform gives you the flexibility to edit, modify, change, delete and 
     update aspects of your website on the go. It gives more power to you in doing 
     business with ease.`,
     list: ["Strapi", "WordPress", "Joomla"],
@@ -67,7 +67,7 @@ const solutions = [
     description: `According to the needs of your business you might have to deal with other 
     businesses, B2B portals  allow you to manage your relationships with other 
     businesses i.e. distributors, partners, vendors and also customers through use of a 
-    single platform. At LogiLogos, we know what it takes to develop astounding B2B 
+    single platform. At 9Solutions, we know what it takes to develop astounding B2B 
     Web Portals that allows businesses to channel their services across the globe.`,
     list: [
       "Investment Portals",
@@ -86,7 +86,7 @@ const solutions = [
     product directly to a consumer. We help you in improving your business measures by catering 
     to all the indispensable aspects of your Business to Customer websites like data and content 
     management, communications management and a lot more. Enquire about the services we 
-    offer at LogiLogos in this domain and join the ranks of our happy clientele.`,
+    offer at 9Solutions in this domain and join the ranks of our happy clientele.`,
     list: [
       "Retail Websites",
       "Ecommerce Stores Travel Ticketing Portals",
@@ -205,7 +205,20 @@ const WebSolutions = () => {
 
       <div className="mt-5">
         <Grid container>
-          <Grid item  lg={12} xl={12} sx={{display: { md: "none", sm: "none", xs: "none", lg: "block", xl: "block"}}}>
+          <Grid
+            item
+            lg={12}
+            xl={12}
+            sx={{
+              display: {
+                md: "none",
+                sm: "none",
+                xs: "none",
+                lg: "block",
+                xl: "block",
+              },
+            }}
+          >
             <div className="solutions-heading">
               {solutions.map((item, index) => (
                 <div key={index} className="solution-option">
@@ -231,7 +244,22 @@ const WebSolutions = () => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} justifyContent="center" sx={{display: { md: "flex", sm: "flex", xs: "flex", lg: "none", xl: "none"}}}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            justifyContent="center"
+            sx={{
+              display: {
+                md: "flex",
+                sm: "flex",
+                xs: "flex",
+                lg: "none",
+                xl: "none",
+              },
+            }}
+          >
             <div className="solutions-heading flex items-center">
               <HiChevronDoubleLeft
                 style={{ opacity: solution == 0 ? 0.3 : 1 }}
@@ -263,7 +291,15 @@ const WebSolutions = () => {
           display="flex"
           justifyContent="space-between"
         >
-          <Grid item xl={6} lg={6} md={12} sm={12} xs={12} style={{ padding: "0px 2% 0px 0px" }}>
+          <Grid
+            item
+            xl={6}
+            lg={6}
+            md={12}
+            sm={12}
+            xs={12}
+            style={{ padding: "0px 2% 0px 0px" }}
+          >
             <h3 className="solution-title">
               <b>{solutions[solution].heading}</b>
             </h3>
@@ -274,7 +310,7 @@ const WebSolutions = () => {
               {solutions[solution].description}
             </p>
             <div className="twoLineList">
-              <ul style={{listStyle: "outside"}}>
+              <ul style={{ listStyle: "outside" }}>
                 {solutions[solution].list.map((listItem) => (
                   <li>{`${listItem}`}</li>
                 ))}
@@ -282,7 +318,15 @@ const WebSolutions = () => {
             </div>
           </Grid>
 
-          <Grid item xl={5.5} lg={5.5} md={12} sm={12} xs={12} className="text-center mx-auto">
+          <Grid
+            item
+            xl={5.5}
+            lg={5.5}
+            md={12}
+            sm={12}
+            xs={12}
+            className="text-center mx-auto"
+          >
             <img
               alt="web-solution"
               src={`/images/web-solutions/ws_image_${solution + 1}.png`}
