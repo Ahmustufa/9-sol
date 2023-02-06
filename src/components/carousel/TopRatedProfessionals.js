@@ -118,7 +118,7 @@ const TopRatedProfessionals = (props) => {
   const awardsAndRecognitionArray = [
     {
       image: awardsAndRecognition1,
-      para: `LogiLogos was amongst the few companies to be awarded with the Best Logo Design Award 2008-2009 in the category of mascot logos. Our excellent designers proved their excellence in design industry.`,
+      para: `9Solutions was amongst the few companies to be awarded with the Best Logo Design Award 2008-2009 in the category of mascot logos. Our excellent designers proved their excellence in design industry.`,
     },
     {
       image: awardsAndRecognition2,
@@ -126,11 +126,11 @@ const TopRatedProfessionals = (props) => {
     },
     {
       image: awardsAndRecognition3,
-      para: `Designers society awards recognizes LogiLogos for successfully completing 8 years in this industry with 80% customer satisfaction.`,
+      para: `Designers society awards recognizes 9Solutions for successfully completing 8 years in this industry with 80% customer satisfaction.`,
     },
     {
       image: awardsAndRecognition4,
-      para: `LogiLogo was awarded by International Logo Branding Awards for consistently delivery value to customers with 80% satisfaction ratio.`,
+      para: `9Solutions was awarded by International Logo Branding Awards for consistently delivery value to customers with 80% satisfaction ratio.`,
     },
     {
       image: awardsAndRecognition5,
@@ -138,11 +138,11 @@ const TopRatedProfessionals = (props) => {
     },
     {
       image: awardsAndRecognition6,
-      para: `LogiLogos was awarded for best and one of its kind HTML 5 web design for the year 2012-2013. Our designers depicted creativity in the work created by them.`,
+      para: `9Solutions was awarded for best and one of its kind HTML 5 web design for the year 2012-2013. Our designers depicted creativity in the work created by them.`,
     },
     {
       image: awardsAndRecognition7,
-      para: `The association of software awarded logiLogos for in the category of web development and software integration in the year 2011-2012 for outstanding work.`,
+      para: `The association of software awarded 9Solutions for in the category of web development and software integration in the year 2011-2012 for outstanding work.`,
     },
     {
       image: awardsAndRecognition8,
