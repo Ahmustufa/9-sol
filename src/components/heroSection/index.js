@@ -10,6 +10,8 @@ import { Typewriter } from "react-simple-typewriter";
 const StyledSection = styled.section`
   .hero-section {
     min-height: 400px;
+    /* height: auto; */
+
     /* display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,6 +26,7 @@ const StyledSection = styled.section`
 
   .overlay {
     min-height: 400px;
+    /* height: auto; */
     background: rgba(0, 0, 0, 0.55);
     position: absolute;
     width: 100%;

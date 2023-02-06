@@ -110,7 +110,8 @@ const AboutUs = () => {
           height={"70vh"}
           type="image"
           companySliderHide={true}
-          background={aboutUsBanner}
+          // background={aboutUsBanner}
+          background="/images/logo_design_hero_background.jpg"
           typeWriterContent="Polymath Team"
           subTitleContent={
             <h2 style={{ color: "#fff", fontSize: 20, fontWeight: 600 }}>

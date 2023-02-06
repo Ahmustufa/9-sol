@@ -22,7 +22,6 @@ const ContactForm = (props) => {
   const {
     handleSubmit,
     control,
-
     formState: { errors },
   } = useForm();
   const handleClose = () => {
@@ -204,7 +203,7 @@ const ContactForm = (props) => {
             </BlackButton>
           ) : (
             <div className="flex justify-center items-center w-full">
-              <CircularProgress />
+              <CircularProgress color="secondary" />
             </div>
           )}
         </Stack>

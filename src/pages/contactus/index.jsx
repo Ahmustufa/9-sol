@@ -387,7 +387,7 @@ const ContactUs = () => {
                   </BlackButton>
                 ) : (
                   <div className="flex justify-center items-center w-full">
-                    <CircularProgress />
+                    <CircularProgress color="secondary" />
                   </div>
                 )}
               </Stack>

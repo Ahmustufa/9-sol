@@ -4,13 +4,10 @@ import { Alert, Box, Button, Stack, TextField } from "@mui/material";
 import Text from "../Typography/Text";
 import BlackButton from "../buttons/BlackButton";
 import Snackbar from "@mui/material/Snackbar";
-import Slide from "@mui/material/Slide";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useForm, Controller } from "react-hook-form";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { RiArrowRightSLine } from "react-icons/ri";
-import { FiSend } from "react-icons/fi";
 import {
   GoogleReCaptchaProvider,
   GoogleReCaptcha,
@@ -327,7 +324,7 @@ const SideBar = () => {
               </BlackButton>
             ) : (
               <div className="flex justify-center items-center w-full">
-                <CircularProgress />
+                <CircularProgress color="secondary" />
               </div>
             )}
           </Stack>

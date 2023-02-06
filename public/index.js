@@ -44,3 +44,4 @@ export const webDevelopment4 = "./images/webdevelopment/web-development-4.png";
 export const webDevelopment5 = "./images/webdevelopment/web-development-5.png";
 export const webDevelopment6 = "./images/webdevelopment/web-development-6.png";
 export const servicesBanner = "./images/services/service-banner.jpg";
+export const webdesignBanner = "../images/web-design-banner.jpg";

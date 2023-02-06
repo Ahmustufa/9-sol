@@ -3,6 +3,8 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
 import SideBar from "@/components/form/SideBar";
+import { Provider } from "react-redux";
+import {store} from '@/redux/store.js';
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -45,7 +47,23 @@ export default function App({ Component, pageProps }) {
           name="article:published_time"
           content={pageProps?.metaData?.publishTime}
         />
-
+        {/* Start of Tawk.to Script */}
+        {/* <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/63e0a292c2f1ac1e20319d07/1goinm3a7';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();`,
+          }}
+        /> */}
+        {/* End of Tawk.to Script */}
         {/* <script async src="build/react.js" /> */}
         <script async src="https://www.google.com/recaptcha/api.js" />
         {/* <script async src="build/index.js" /> */}
@@ -69,7 +87,7 @@ export default function App({ Component, pageProps }) {
           `,
           }}
         />
-{/* <script>
+        {/* <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)}
   gtag('js', new Date());
@@ -103,10 +121,12 @@ export default function App({ Component, pageProps }) {
           />
         </noscript>
       </Head>
+      <Provider store={store}>
       <Layout>
         <SideBar />
         <Component {...pageProps} />
       </Layout>
+      </Provider>
     </>
   );
 }

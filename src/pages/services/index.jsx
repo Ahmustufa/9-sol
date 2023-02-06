@@ -4,7 +4,7 @@ import WebDevelopement from "@/components/webDevelopment";
 // import ContactInfo from "../src/component/contactInfo";
 import HeroSection from "@/components/heroSection";
 // import Head from "next/head";
-import { servicesBanner } from "/public";
+import { servicesBanner, webdesignBanner } from "/public";
 // import LazyLoad from "react-lazyload";
 import Heading from "@/components/Title/Heading";
 import Pricing from "@/components/services/Pricing";
@@ -17,7 +17,7 @@ const WebDevelopment = () => {
         height="70vh"
         companySliderHide={true}
         type="image"
-        background={servicesBanner}
+        background={webdesignBanner}
       >
         <div>
           <Heading color="#fff" backgroundColor="#aa076b">
