@@ -4,7 +4,8 @@ import Layout from "../components/Layout";
 import { useRouter } from "next/router";
 import SideBar from "@/components/form/SideBar";
 import { Provider } from "react-redux";
-import {store} from '@/redux/store.js';
+import { store } from "@/redux/store.js";
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -122,10 +123,10 @@ s0.parentNode.insertBefore(s1,s0);
         </noscript>
       </Head>
       <Provider store={store}>
-      <Layout>
-        <SideBar />
-        <Component {...pageProps} />
-      </Layout>
+        <Layout>
+          <SideBar />
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </>
   );

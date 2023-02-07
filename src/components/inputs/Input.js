@@ -12,7 +12,7 @@ const Input = (props) => {
       rules={{
         required: true,
         minLength: length,
-        pattern,
+        pattern: pattern
       }}
       render={({ field: { onChange, value } }) => (
         <TextInput onChange={onChange} value={value} label={label} />

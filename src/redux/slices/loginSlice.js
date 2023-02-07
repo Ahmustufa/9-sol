@@ -1,19 +1,27 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
-export const loginApi = createAsyncThunk("login/post", async(data)=>{
-    const response = await axios.post("/api/admin/login", data)
-    return response.data
-})
+// import Cookies from "cookies";
+export const loginApi = createAsyncThunk("login/post", async (data, navigate) => {
+  const response = await axios.post("/api/admin/login", data);
+  // const cookies = new Cookies(req, res);
+  // cookies.set("jwt", response.data.token);
+  // console.log(cookies);
+  if(response.status === 200){
+    console.log("success",);
+    navigate.replace('/dashboard')
+  }
+  return response.data;
+});
 
 const initialState = {
   data: "",
   error: "",
   isLoading: false,
+  isLoggedIn: true
 };
 
 const loginSlice = createSlice({
-  name: "data",
+  name: "login",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -28,6 +36,7 @@ const loginSlice = createSlice({
         return {
           ...state,
           isLoading: false,
+          isLoggedIn: true,
           data: action.payload,
           error: "",
         };
