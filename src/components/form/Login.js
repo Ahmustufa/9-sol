@@ -6,7 +6,9 @@ import { useForm } from "react-hook-form";
 import Text from "../Typography/Text";
 import BlackButton from "../buttons/BlackButton";
 import CircularProgress from "@mui/material/CircularProgress";
-const Signup = () => {
+import { useSelectorm, useDispatch } from "react-redux";
+const Login = () => {
+  const dispatch = useDispatch()
   const [initState, setInitState] = React.useState({
     loading: false,
     success: false,
@@ -48,7 +50,7 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
 
 const Form = styled(Box)`
 /* padding: 20px; */

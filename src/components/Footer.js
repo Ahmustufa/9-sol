@@ -128,12 +128,12 @@ const Footer = () => {
               </Bounce>
               <Link href="/aboutus">About</Link>
             </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            {/* <div style={{ display: "flex", alignItems: "center" }}>
               <Bounce style={{ paddingRight: "20px" }}>
                 <RxDoubleArrowRight color="white" />
               </Bounce>
               <Link href="/blogs">Blog</Link>
-            </div>
+            </div> */}
             <div style={{ display: "flex", alignItems: "center" }}>
               <Bounce style={{ paddingRight: "20px" }}>
                 <RxDoubleArrowRight color="white" />
