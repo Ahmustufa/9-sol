@@ -6,39 +6,92 @@ import { useForm } from "react-hook-form";
 import Text from "../Typography/Text";
 import BlackButton from "../buttons/BlackButton";
 import CircularProgress from "@mui/material/CircularProgress";
-import {  useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginApi } from "@/redux/slices/loginSlice";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
-  const router = useRouter()
+  const router = useRouter();
   const dispatch = useDispatch();
-  const {isLoading} = useSelector((store)=>store.login)
-  console.log(isLoading);
-    const {
-        handleSubmit,
-        control,
-        formState: { errors },
-    } = useForm();
-    // console.log(control);
-    const onSubmit = (data)=> {
-      console.log(data);
-      dispatch(loginApi(data, router))
-    }
+  const { isLoading, isLoggedIn } = useSelector((store) => store.login);
+  const notify = () => toast("Successfully logging you in!");
+  console.log("isLoggedIn", isLoggedIn);
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+  // console.log(control);
 
-    // useEffect(()=>{
-    //   dispatch(loginApi())
-    // }, [])
+  const onSubmit = (data) => {
+    // console.log(data);
+    const newData = { data, router };
+    dispatch(loginApi(newData));
+    // console.log("router", router);
+    if (isLoggedIn) {
+      toast.success("🦄 Successfully loggin you in!", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.error("An unexpected error has occured!", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
+
+  // useEffect(()=>{
+  //   dispatch(loginApi())
+  // }, [])
   return (
-    <Form component="form">
+    <>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+
+      <Form component="form">
         <div className="w-full rounded-md p-4 h-20 bg-gradient-to-r from-darkMagenta via-magenta to-magenta">
-            <Text className="text-white" fontSize="22px">
-                Login
-            </Text>
+          <Text className="text-white" fontSize="22px">
+            Login
+          </Text>
         </div>
-      <Stack spacing={2} p={5}>
-        <Input label="Email" control={control} name="email" pattern={`/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/`} />
-        <Input label="Password" control={control} name="password" pattern={`/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/`} />
-        {!isLoading ? (
+        <Stack spacing={2} p={5}>
+          <Input
+            label="Email"
+            control={control}
+            name="email"
+            pattern={`/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/`}
+          />
+          <Input
+            label="Password"
+            control={control}
+            name="password"
+            pattern={`/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/`}
+          />
+          {!isLoading ? (
             <BlackButton
               onClick={handleSubmit(onSubmit)}
               style={{ fontWeight: "bold", fontSize: 16 }}
@@ -50,15 +103,16 @@ const Login = () => {
               <CircularProgress color="secondary" />
             </div>
           )}
-      </Stack>
-    </Form>
+        </Stack>
+      </Form>
+    </>
   );
 };
 
 export default Login;
 
 const Form = styled(Box)`
-/* padding: 20px; */
-border-radius: 10px;
-border: 1px solid grey;
-`
+  /* padding: 20px; */
+  border-radius: 10px;
+  border: 1px solid grey;
+`;

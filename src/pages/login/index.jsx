@@ -2,7 +2,7 @@ import Login from '@/components/form/Login'
 import React from 'react'
 import styled from 'styled-components'
 
-const Dashboard =()=> {
+const Index =()=> {
   return (
     <Div>
       <Login/>
@@ -10,7 +10,7 @@ const Dashboard =()=> {
   )
 }
 
-export default Dashboard
+export default Index
 const Div = styled.div`
   display: flex;
   justify-content: center;

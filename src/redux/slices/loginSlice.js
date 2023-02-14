@@ -1,23 +1,35 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+// import login from '../actions/loginApi'
 // import Cookies from "cookies";
-export const loginApi = createAsyncThunk("login/post", async (data, navigate) => {
-  const response = await axios.post("/api/admin/login", data);
-  // const cookies = new Cookies(req, res);
-  // cookies.set("jwt", response.data.token);
-  // console.log(cookies);
-  if(response.status === 200){
-    console.log("success",);
-    navigate.replace('/dashboard')
+
+export const loginApi = createAsyncThunk(
+  "login/post",
+  async ({ data, router }) => {
+    try {
+      // console.log('data', router)
+      const response = await axios.post("/api/admin/login", data);
+      const token = response?.data?.token;
+      // console.log("response", token);
+      if (response.status === 200) {
+        document.cookie = `jwt=${token}; path=/;`;
+        // console.log("success", cookieCheck);
+        setTimeout(() => {
+          router.push("/dashboard");
+        }, 3000);
+      }
+      return response.data;
+    } catch (error) {
+      throw error.response.data;
+    }
   }
-  return response.data;
-});
+);
 
 const initialState = {
   data: "",
   error: "",
   isLoading: false,
-  isLoggedIn: true
+  isLoggedIn: false,
 };
 
 const loginSlice = createSlice({
@@ -36,9 +48,8 @@ const loginSlice = createSlice({
         return {
           ...state,
           isLoading: false,
-          isLoggedIn: true,
           data: action.payload,
-          error: "",
+          isLoggedIn: true,
         };
       })
       .addCase(loginApi.rejected, (state, action) => {
