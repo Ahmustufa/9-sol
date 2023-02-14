@@ -12,9 +12,9 @@ export default async function handler(req, res) {
       res.json({ message: "Invalid email or password" });
     } else {
       let admin = await db.collection("admins").findOne({ email });
-      // console.log("admin", admin.password);
-      let match = await bcrypt.compare(password, admin.password);
-    //   console.log("match", match);
+      console.log("admin", admin?.password);
+      let match = await bcrypt.compare(password, admin?.password);
+      console.log("match", match);
       if (!match) {
         res.status(400).json({ message: "Incorrect email or password" });
       } else {

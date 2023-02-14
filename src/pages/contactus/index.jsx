@@ -401,6 +401,20 @@ const ContactUs = () => {
 
 export default ContactUs;
 
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      metaData: {
+        title: "Contact us E-commerce | Website Design and Development Company",
+        description:
+          "Call Us 24/7 (650)-681-9645. Fill the form to receive a guaranteed response within 24 hours. We are extremely satisfied in assisting you. Book us now!",
+        keywords: "Contact us E-commerce | Website Design and Development Company",
+        publishTime: new Date().toISOString(),
+      },
+    },
+  };
+}   
+
 const Input = styled(TextField)`
   /* width: 50%; */
   .MuiOutlinedInput-notchedOutline {
@@ -425,3 +439,4 @@ const PhoneField = styled(PhoneInput)`
   border-radius: 5px;
   border: 1px solid grey;
 `;
+
