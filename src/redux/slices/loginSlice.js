@@ -2,6 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 // import login from '../actions/loginApi'
 // import Cookies from "cookies";
+import Cookies from 'js-cookie'
+
 
 export const loginApi = createAsyncThunk(
   "login/post",
@@ -12,10 +14,11 @@ export const loginApi = createAsyncThunk(
       const token = response?.data?.token;
       // console.log("response", token);
       if (response.status === 200) {
-        document.cookie = `jwt=${token}; path=/;`;
-        // console.log("success", cookieCheck);
+        // document.cookie = `jwt=${token}; path=/;`;
+        Cookies.set('jwt', token, {expires: 7})
+        // console.log("success", Cookies.get('jwt'));
         setTimeout(() => {
-          router.push("/dashboard");
+          // router.push("/dashboard");
         }, 3000);
       }
       return response.data;
@@ -29,7 +32,9 @@ const initialState = {
   data: "",
   error: "",
   isLoading: false,
-  isLoggedIn: false,
+  isLoggedIn: Cookies.get("jwtToken") !== null &&
+  Cookies.get("jwtToken") !== undefined &&
+  Cookies.get("jwtToken") !== "",
 };
 
 const loginSlice = createSlice({
@@ -48,8 +53,8 @@ const loginSlice = createSlice({
         return {
           ...state,
           isLoading: false,
-          data: action.payload,
           isLoggedIn: true,
+          data: action.payload,
         };
       })
       .addCase(loginApi.rejected, (state, action) => {
