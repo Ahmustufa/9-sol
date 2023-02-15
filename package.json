@@ -16,10 +16,13 @@
     "@mui/material": "^5.11.4",
     "@next/font": "13.1.2",
     "@reduxjs/toolkit": "^1.9.1",
+    "@stripe/react-stripe-js": "^1.16.4",
+    "@stripe/stripe-js": "^1.46.0",
     "axios": "^1.2.2",
     "bcrypt": "^5.1.0",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^9.0.0",
+    "micro": "^10.0.1",
     "moment": "^2.29.4",
     "mongodb": "^5.0.0",
     "mongoose": "^6.9.1",
@@ -38,6 +41,7 @@
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
     "slick-carousel": "^1.8.1",
+    "stripe": "^11.10.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
