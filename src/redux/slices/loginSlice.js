@@ -18,7 +18,7 @@ export const loginApi = createAsyncThunk(
         Cookies.set('jwt', token, {expires: 7})
         // console.log("success", Cookies.get('jwt'));
         setTimeout(() => {
-          // router.push("/dashboard");
+          router.push("/dashboard");
         }, 3000);
       }
       return response.data;
