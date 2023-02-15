@@ -2,28 +2,24 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 // import login from '../actions/loginApi'
 // import Cookies from "cookies";
-import Cookies from 'js-cookie'
-
+import Cookies from "js-cookie";
 
 export const loginApi = createAsyncThunk(
   "login/post",
-  async ({ data, router }) => {
+  async ({ data, router }, { rejectWithValue }) => {
     try {
-      // console.log('data', router)
       const response = await axios.post("/api/admin/login", data);
       const token = response?.data?.token;
-      // console.log("response", token);
       if (response.status === 200) {
-        // document.cookie = `jwt=${token}; path=/;`;
-        Cookies.set('jwt', token, {expires: 7})
-        // console.log("success", Cookies.get('jwt'));
+        Cookies.set("jwt", token, { expires: 7 });
         setTimeout(() => {
           router.push("/dashboard");
         }, 3000);
+        return response.data;
       }
-      return response.data;
     } catch (error) {
-      throw error.response.data;
+      const errorMessage = rejectWithValue(error.message);
+      return errorMessage;
     }
   }
 );
@@ -32,9 +28,10 @@ const initialState = {
   data: "",
   error: "",
   isLoading: false,
-  isLoggedIn: Cookies.get("jwtToken") !== null &&
-  Cookies.get("jwtToken") !== undefined &&
-  Cookies.get("jwtToken") !== "",
+  isLoggedIn:
+    Cookies.get("jwt") !== null &&
+    Cookies.get("jwt") !== undefined &&
+    Cookies.get("jwt") !== "",
 };
 
 const loginSlice = createSlice({
@@ -53,8 +50,8 @@ const loginSlice = createSlice({
         return {
           ...state,
           isLoading: false,
-          isLoggedIn: true,
           data: action.payload,
+          isLoggedIn: true,
         };
       })
       .addCase(loginApi.rejected, (state, action) => {
@@ -62,6 +59,8 @@ const loginSlice = createSlice({
           ...state,
           isLoading: false,
           error: action.payload,
+          isLoggedIn: false,
+          data: "",
         };
       });
   },

@@ -1,11 +1,14 @@
-import React from 'react'
+import Head from "next/head";
+import React from "react";
 
-const Index = ()=> {
+const Index = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <Head>
+        <title>Blogs</title>
+      </Head>
+    </>
+  );
+};
 
-export default Index
+export default Index;

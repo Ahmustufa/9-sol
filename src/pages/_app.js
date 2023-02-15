@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 import SideBar from "@/components/form/SideBar";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store.js";
-
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  
   return (
     <>
       <Head>
