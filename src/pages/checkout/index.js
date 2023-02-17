@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CheckoutForm from "@/components/form/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-// import "@stripe/stripe-js";
 import axios from "axios";
 import { Box, Divider, Grid } from "@mui/material";
 import PropagateLoader from "react-spinners/PropagateLoader";
@@ -52,6 +51,7 @@ function CheckoutPage() {
   <>
   <Head>
     <title>Checkout</title>
+    <link rel="icon" href="/favicon.svg" />
   </Head>
     <Grid
       container
