@@ -5,14 +5,15 @@ import styled from "styled-components";
 import { loadStripe } from "@stripe/stripe-js";
 import "@stripe/stripe-js";
 import axios from "axios";
-import { Grid } from "@mui/material";
-import PropagateLoader from 'react-spinners/PropagateLoader' 
+import { Box, Divider, Grid } from "@mui/material";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import Text from "@/components/Typography/Text";
 const stripe = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`);
 
 function CheckoutPage() {
   const [clientSecret, setClientSecret] = useState("");
   const [paymentIntent, setPaymentIntent] = useState("");
-  console.log("stripePromise", stripe);
+  // console.log("stripePromise", stripe);
 
   const getPaymentIntent = async () => {
     try {
@@ -20,6 +21,7 @@ function CheckoutPage() {
       const { client_secret, id } = response.data;
       setPaymentIntent(id);
       setClientSecret(client_secret);
+      // console.log("apires", response);
     } catch (error) {
       console.log("error", error);
     }
@@ -27,20 +29,20 @@ function CheckoutPage() {
   useEffect(() => {
     getPaymentIntent();
   }, []);
-  console.log("clientSecret", clientSecret);
+  // console.log("clientSecret", clientSecret);
   const options = {
     clientSecret,
     appearance: {
       theme: "stripe",
       labels: "floating",
       variables: {
-        colorPrimary: "#0570de",
+        colorPrimary: "#aa076b",
         colorBackground: "#ffffff",
         colorText: "#30313d",
         colorDanger: "#df1b41",
         fontFamily: "Ideal Sans, system-ui, sans-serif",
-        spacingUnit: "2px",
-        borderRadius: "4px",
+        spacingUnit: "3px",
+        borderRadius: "10px",
       },
     },
   };
@@ -51,17 +53,36 @@ function CheckoutPage() {
       container
       height={"100vh"}
       alignItems="center"
-      justifyContent="center"
+      // justifyContent="center"
     >
-      <Grid xs={6} mx={2}>
+      <Grid item xs />
+      <Grid item xs={4} p={2} width="100%" className="border-r-2 border-gray">
         {stripe && clientSecret ? (
           <Elements options={options} stripe={stripe}>
-            <CheckoutForm paymentIntent={paymentIntent} />
+            <CheckoutForm stripe={stripe} paymentIntent={paymentIntent} />
           </Elements>
         ) : (
           <PropagateLoader color="#aa076b" />
         )}
       </Grid>
+      <Grid item xs={4} p={4} >
+        <Box>
+          Product
+        </Box>
+        <Divider />
+        <Box py={2}>
+        <div style={{display:"flex", padding: "2px"}}>
+          <Text>Tax</Text>
+          <Text sx={{ marginLeft: "auto" }}>$</Text>
+        </div>
+        <div style={{display:"flex", padding: "2px"}}>
+          <Text>Subtotal</Text>
+          <Text sx={{ marginLeft: "auto" }}>$</Text>
+        </div>
+        </Box>
+        <Divider />
+      </Grid>
+      <Grid item xs />
     </Grid>
   );
 }

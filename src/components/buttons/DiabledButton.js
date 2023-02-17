@@ -1,9 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 const DiabledButton =(props)=> {
   return (
-    <button {...props} type="button" class="px-8 py-3 text-white bg-blue-300 rounded focus:outline-none" disabled>{props.children}</button>
-
+    <button {...props} type="button" className="px-5 py-2 text-white bg-magenta rounded-xl focus:outline-none disabled:opacity-25 w-full">{props.children}</button>
   )
 }
 

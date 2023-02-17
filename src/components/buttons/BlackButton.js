@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const BlackButton = (props) => {
   return (
@@ -13,3 +14,11 @@ const BlackButton = (props) => {
 };
 
 export default BlackButton;
+// const Button = styled.button`
+// button:disabled,
+// button[disabled]{
+//   border: 1px solid #999999;
+//   background-color: #cccccc;
+//   color: #666666;
+// }
+// `

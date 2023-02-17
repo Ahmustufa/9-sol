@@ -1,6 +1,6 @@
-import Stripe from 'stripe';
+import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2020-08-27',
+  apiVersion: "2020-08-27",
 });
 
 const handler = async (req, res) => {
@@ -24,9 +24,9 @@ const handler = async (req, res) => {
       }
     } catch (e) {
       //Catch any error and return a status 500
-      if (e.code !== 'resource_missing') {
+      if (e.code !== "resource_missing") {
         const errorMessage =
-          e instanceof Error ? e.message : 'Internal server error';
+          e instanceof Error ? e.message : "Internal server error";
         res.status(500).json({ statusCode: 500, message: errorMessage });
         return;
       }
@@ -36,18 +36,19 @@ const handler = async (req, res) => {
     // Create PaymentIntent
     const params = {
       amount: amount,
-      currency: 'eur',
-      description: 'Payment description',
+      currency: "eur",
+      description: "Payment description",
       automatic_payment_methods: {
         enabled: true,
       },
     };
     const payment_intent = await stripe.paymentIntents.create(params);
     //Return the payment_intent object
+    // console.log("payment_intent", payment_intent);
     res.status(200).json(payment_intent);
   } catch (err) {
     const errorMessage =
-      err instanceof Error ? err.message : 'Internal server error';
+      err instanceof Error ? err.message : "Internal server error";
     res.status(500).json({ statusCode: 500, message: errorMessage });
   }
 };
