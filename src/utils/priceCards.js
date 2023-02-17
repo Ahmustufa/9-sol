@@ -5,7 +5,7 @@ export const web = [
       price: 199,
       oldPrice: "666",
       items: [
-        "3 Page Website",
+        "3 Page Website", 
         "2 Stock Images",
         "1 jQuery Slider Banner",
         "Contact/Query Form",

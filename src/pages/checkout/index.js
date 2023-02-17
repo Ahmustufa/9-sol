@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import CheckoutForm from "@/components/form/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
-import styled from "styled-components";
 import { loadStripe } from "@stripe/stripe-js";
-import "@stripe/stripe-js";
+// import "@stripe/stripe-js";
 import axios from "axios";
 import { Box, Divider, Grid } from "@mui/material";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Text from "@/components/Typography/Text";
+import Head from "next/head";
 const stripe = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`);
 
 function CheckoutPage() {
@@ -49,6 +49,10 @@ function CheckoutPage() {
 
   // console.log("options", options);
   return (
+  <>
+  <Head>
+    <title>Checkout</title>
+  </Head>
     <Grid
       container
       height={"100vh"}
@@ -56,13 +60,13 @@ function CheckoutPage() {
       // justifyContent="center"
     >
       <Grid item xs />
-      <Grid item xs={4} p={2} width="100%" className="border-r-2 border-gray">
+      <Grid item xs={4} width="100%" className="border-r-2 border-gray">
         {stripe && clientSecret ? (
           <Elements options={options} stripe={stripe}>
-            <CheckoutForm stripe={stripe} paymentIntent={paymentIntent} />
+            <CheckoutForm  paymentIntent={paymentIntent} />
           </Elements>
-        ) : (
-          <PropagateLoader color="#aa076b" />
+        ) : ( ""
+          // <PropagateLoader color="#aa076b" />
         )}
       </Grid>
       <Grid item xs={4} p={4} >
@@ -83,7 +87,7 @@ function CheckoutPage() {
         <Divider />
       </Grid>
       <Grid item xs />
-    </Grid>
+    </Grid></>
   );
 }
 

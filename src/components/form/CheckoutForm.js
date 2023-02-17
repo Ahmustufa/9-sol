@@ -9,7 +9,7 @@ import {
 } from "@stripe/react-stripe-js";
 import BlackButton from "../buttons/BlackButton";
 import Text from "../Typography/Text";
-import { Box } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import styled from "styled-components";
 import DiabledButton from "../buttons/DiabledButton";
 import Link from "next/link";
@@ -17,7 +17,7 @@ function CheckoutForm(props) {
   // const { paymentIntent } = props;
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage]= useState('')
+  const [errorMessage, setErrorMessage] = useState("");
   const stripe = useStripe();
   const elements = useElements();
 
@@ -28,30 +28,27 @@ function CheckoutForm(props) {
       // Make sure to disable form submission until Stripe.js has loaded.
       return;
     }
-
+    setLoading(true);
     const response = await stripe.confirmPayment({
       //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
-        return_url: "",
+        return_url: "http://localhost:4000/checkout/status",
       },
     });
-    
-    console.log("response", response);
-  
+
+
     if (response.error) {
       // This point will only be reached if there is an immediate error when
       // confirming the payment. Show error to your customer (for example, payment
       // details incomplete)
+      setLoading(false)
       setErrorMessage(response.error.message);
     } else {
-      // Your customer will be redirected to your `return_url`. For some payment
-      // methods like iDEAL, your customer will be redirected to an intermediate
-      // site first to authorize the payment, then redirected to the `return_url`.
+      setLoading(false);
     }
   };
 
-  // console.log("paymentMethod", paymentMethod);
   const paymentElementOptions = {
     layout: "accordion",
   };
@@ -85,10 +82,22 @@ function CheckoutForm(props) {
               // onReady={(e) => setPaymentMethod(e)}
             />
           </Box>
-          <Box p={2}>
-            <DiabledButton onClick={handleSubmit} disabled={!stripe}>
-              Submit
-            </DiabledButton>
+          {/* {errorMessage? <Box className="bg-gray rounded-lg p-2" mx={2} >
+            <p style={{ color: "red", fontSize: 12 }}>{errorMessage}</p>
+          </Box> : ""} */}
+          <Box px={2} pb={3}>
+            {loading ? (
+              <DiabledButton disabled className="flex items-center">
+                Loading...
+                {/* <span style={{ padding: "0px 20px" }}>
+                  <CircularProgress size={30} color="primary" />
+                </span> */}
+              </DiabledButton>
+            ) : (
+              <DiabledButton onClick={handleSubmit} disabled={!elements && !stripe }>
+                Submit
+              </DiabledButton>
+            )}
           </Box>
         </div>
       )}
@@ -98,10 +107,3 @@ function CheckoutForm(props) {
 
 export default CheckoutForm;
 
-const Button = styled.button`
-  background-color: #aa076b;
-  padding: 8px 15px;
-  width: 100%;
-  border-radius: 13px;
-  color: white;
-`;
