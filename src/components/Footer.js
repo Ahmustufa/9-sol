@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Stack } from "@mui/material";
 import Image from "next/image";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
+// import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import styled from "styled-components";
 import moment from "moment/moment";
 import Link from "next/link";

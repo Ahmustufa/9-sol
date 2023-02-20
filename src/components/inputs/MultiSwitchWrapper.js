@@ -53,6 +53,7 @@ const StyledContent = styled.div`
 
 const MultiSwitchWrapper = (props) => {
   const { options, onChange } = props;
+  // console.log("options", options);
   const [state, setState] = useState(0);
 
   const optionsRef = useRef([{}]);

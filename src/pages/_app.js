@@ -5,15 +5,16 @@ import { useRouter } from "next/router";
 import SideBar from "@/components/form/SideBar";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store.js";
+import Script from "next/script";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  if(router.pathname="/checkout"){
-    return(
-    <Provider store={store}>
-          <Component {...pageProps} />
-    </Provider>
-    )
-  }
+  // if(router.pathname="/checkout"){
+  //   return(
+  //   <Provider store={store}>
+  //         <Component {...pageProps} />
+  //   </Provider>
+  //   )
+  // }
   return (
     <>
       <Head>
@@ -22,7 +23,7 @@ export default function App({ Component, pageProps }) {
 
         <title>{pageProps?.metaData?.title}</title>
 
-        <link rel="icon" href="/favicon1.png" />
+        <link rel="icon" href="/favicon.svg" />
         <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -72,18 +73,18 @@ s0.parentNode.insertBefore(s1,s0);
         /> */}
         {/* End of Tawk.to Script */}
         {/* <script async src="build/react.js" /> */}
-        <script async src="https://www.google.com/recaptcha/api.js" />
+        <Script async src="https://www.google.com/recaptcha/api.js" />
         {/* <script async src="build/index.js" /> */}
         {/* <script
           type="text/javascript"
           src="https://2pay-js.2checkout.com/v1/2pay.js"
           async
         /> */}
-        <script
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-MDE9VVJHKV"
         />
-        <script
+        <Script
           // strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -100,8 +101,8 @@ s0.parentNode.insertBefore(s1,s0);
   gtag('js', new Date());
 
   gtag('config', 'G-MDE9VVJHKV');
-</script> */}
-        <script
+</Script> */}
+        <Script
           dangerouslySetInnerHTML={{
             __html: `!function(q,e,v,n,t,s){if(q.qp) return; 
               n=q.qp=function(){
@@ -118,15 +119,15 @@ s0.parentNode.insertBefore(s1,s0);
             qp('init', '9b8a8c9e206c4f698c5726ec04b13148');
             qp('track', 'ViewContent');`,
           }}
-        ></script>
-        <noscript>
+        />
+        {/* <noscript>
           <img
             height={1}
             width={1}
             style={{ display: "none" }}
             src="https://q.quora.com/_/ad/9b8a8c9e206c4f698c5726ec04b13148/pixel?tag=ViewContent&noscript=1"
           />
-        </noscript>
+        </noscript> */}
       </Head>
       <Provider store={store}>
         <Layout>

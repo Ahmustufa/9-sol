@@ -17,7 +17,7 @@ function Error() {
     >
       <Container maxWidth="md">
         <Grid container>
-          <Grid xs={12} display="flex" justifyContent="center">
+          <Grid item xs={12} display="flex" justifyContent="center">
             <Image
               alt="404"
               height="300"
@@ -26,12 +26,12 @@ function Error() {
           </Grid>
         </Grid>
         <Grid container>
-          <Grid xs={12} display="flex" justifyContent="center" mb={4}>
+          <Grid item xs={12} display="flex" justifyContent="center" mb={4}>
             <Text variant="h4">The page you're looking for doesn't exist.</Text>
           </Grid>
         </Grid>
         <Grid container>
-          <Grid xs={12} display="flex" justifyContent="center">
+          <Grid item xs={12} display="flex" justifyContent="center">
             <LinearButton style={{ padding: 10 }}>
               <Link href="/" >
                 Back Home

@@ -20,19 +20,18 @@ const Pricing = (props) => {
     { label: "Logo", value: "logoPackage" },
     { label: "SEO", value: "SEO" },
     { label: "Branding", value: "branding" },
-    // { label: "Promo Items", value: "promoPackage" },
   ];
   const solutionTypeChange = (type) => {
     setSolution(type);
   };
-  useEffect(() => {
-    if (type === "logo") {
-      setSolution("logoPackage");
-    }
-    if (type == "web") {
-      setSolution("webPackage");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (type === "logo") {
+  //     setSolution("logoPackage");
+  //   }
+  //   if (type == "web") {
+  //     setSolution("webPackage");
+  //   }
+  // }, []);
   return (
     <ParentGrid container>
       <Grid item xs={12}>
@@ -74,6 +73,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -194,6 +194,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -299,6 +300,7 @@ const Pricing = (props) => {
               ? logo.map((val, index) => {
                   return (
                     <Cards
+                    key={index}
                       item
                       xs={7}
                       xl={2.5}
@@ -406,6 +408,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -512,6 +515,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
