@@ -128,12 +128,16 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/1.jpg",
+      imageSrc: "/images/web_design/1.webp",
     },
+    // {
+    //   type: 2,
+    //   imageSrc:
+    //     "/images/ecomerce_website_development/ecommerce_website_development_1.png",
+    // },
     {
       type: 2,
-      imageSrc:
-        "/images/ecomerce_website_development/ecommerce_website_development_1.png",
+      imageSrc: "/images/web_design/4.webp",
     },
     // {
     //   type: 1,
@@ -163,7 +167,7 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/2.jpg",
+      imageSrc: "/images/web_design/2.webp",
     },
     {
       type: 2,
@@ -198,7 +202,7 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/3.jpg",
+      imageSrc: "/images/web_design/3.webp",
     },
     {
       type: 2,
@@ -233,12 +237,16 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/4.jpg",
+      imageSrc: "/images/web_design/6.webp",
     },
+    // {
+    //   type: 2,
+    //   imageSrc:
+    //     "/images/ecomerce_website_development/ecommerce_website_development_4.png",
+    // },
     {
       type: 2,
-      imageSrc:
-        "/images/ecomerce_website_development/ecommerce_website_development_4.png",
+      imageSrc: "/images/web_design/5.jpg",
     },
     // {
     //   type: 1,
@@ -268,7 +276,7 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/5.jpg",
+      imageSrc: "/images/web_design/5.webp",
     },
     {
       type: 2,
@@ -303,7 +311,7 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/6.jpg",
+      imageSrc: "/images/web_design/7.webp",
     },
     {
       type: 2,
@@ -338,7 +346,7 @@ export const options = [
     // },
     {
       type: 2,
-      imageSrc: "/images/web_design/7.jpg",
+      imageSrc: "/images/web_design/8.webp",
     },
     {
       type: 2,
