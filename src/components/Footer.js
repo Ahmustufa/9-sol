@@ -11,9 +11,10 @@ import Bounce from "./animation/Bounce";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Ripple from "./animation/Ripple";
+import { items } from "@/utils/navItems";
 const FooterContent2Div = styled.div`
   background-color: #232a38;
-  padding: 16px 8%;
+  padding: 16px 4%;
 
   a {
     color: #9da4b1;
@@ -74,7 +75,15 @@ const Footer = () => {
   return (
     <FooterContent2Div>
       <Grid container mb={5}>
-        <Grid item xl={4} lg={4} md={6} sm={10} xs={10} sx={{display: {sm: {justifyContent: "center"}}}}>
+        <Grid
+          item
+          xl={4}
+          lg={4}
+          md={6}
+          sm={10}
+          xs={10}
+          sx={{ display: { sm: { justifyContent: "center" } } }}
+        >
           {/* <Box> */}
           <Link href="/">
             <Image
@@ -102,7 +111,7 @@ const Footer = () => {
               <a
                 className="text-white px-2"
                 href="mailto:management@9solutions.com"
-                style={{whiteSpace: "wrap"}}
+                style={{ whiteSpace: "wrap" }}
               >
                 management@9solutions.com
               </a>
@@ -116,38 +125,27 @@ const Footer = () => {
             </Text>
           </Box>
           <Stack spacing={2}>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Bounce style={{ paddingRight: "20px" }}>
-                <RxDoubleArrowRight color="white" />
-              </Bounce>
-              <Link href="/">Home</Link>
-            </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Bounce style={{ paddingRight: "20px" }}>
-                <RxDoubleArrowRight color="white" />
-              </Bounce>
-              <Link href="/aboutus">About</Link>
-            </div>
-            {/* <div style={{ display: "flex", alignItems: "center" }}>
-              <Bounce style={{ paddingRight: "20px" }}>
-                <RxDoubleArrowRight color="white" />
-              </Bounce>
-              <Link href="/blogs">Blog</Link>
-            </div> */}
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Bounce style={{ paddingRight: "20px" }}>
-                <RxDoubleArrowRight color="white" />
-              </Bounce>
-              <Link href="/contactus">Contact</Link>
-            </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Bounce style={{ paddingRight: "20px" }}>
-                <RxDoubleArrowRight color="white" />
-              </Bounce>
-              <Link href="/services">Services</Link>
-            </div>
+            {items.map((item) => (
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Bounce style={{ paddingRight: "20px" }}>
+                  <RxDoubleArrowRight color="white" />
+                </Bounce>
+                <Link href={item.to}>{item.title}</Link>
+              </div>
+            ))}
           </Stack>
         </Grid>
+        {/* <Grid item xs="auto">
+          <Text color="white">
+            At 9Solutiions, we're passionate about delivering innovative and
+            high-quality web and mobile development solutions. Our team of
+            expert developers works tirelessly to bring your vision to life and
+            create products that stand out in the digital landscape. If you're
+            interested in working with us or learning more about our services,
+            feel free to get in touch with us via the contact information below.
+            We'd love to hear from you!
+          </Text>
+        </Grid> */}
         <Grid
           item
           xl={6}
@@ -164,7 +162,7 @@ const Footer = () => {
           }}
         >
           <Ripple>
-            <Image src={require("/public/images/mobile/VR.png")} height={350} />
+            <Image src={require("/public/images/mobile/VR.png")} height={290} />
           </Ripple>
         </Grid>
       </Grid>
