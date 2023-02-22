@@ -8,16 +8,20 @@ import { store } from "@/redux/store.js";
 import React, { useEffect } from "react";
 import HashLoader from "@/components/loader/HashLoader";
 import Router from "next/router";
-export default function App({ Component, pageProps }) {
-  // const [loading, setLoading] = React.useState(false);
-  const router = useRouter();
-  // useEffect(() => {
-  //   router.events.on("routeChangeStart", (url, { shallow }) => {
-  //     console.log(`routing to ${url}`, `is shallow routing: ${shallow}`);
-  //   });
-  // }, []);
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css'; 
+import '../styles/Nprogress.css'
 
-  // console.log("loading", loading);
+NProgress.configure({ showSpinner: false })
+
+export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    Router.events.on('routeChangeStart', () => NProgress.start()); 
+    Router.events.on('routeChangeComplete', () => NProgress.done()); 
+    Router.events.on('routeChangeError', () => NProgress.done());
+  }, []);
 
   return (
     <>
