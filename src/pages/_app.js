@@ -8,13 +8,14 @@ import { store } from "@/redux/store.js";
 import Script from "next/script";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  // if(router.pathname="/checkout"){
-  //   return(
-  //   <Provider store={store}>
-  //         <Component {...pageProps} />
-  //   </Provider>
-  //   )
-  // }
+  // console.log("Component.name", Component.name);
+  if (Component.name === "CheckoutPage" || Component.name=== "Status") {
+    return (
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    );
+  }
   return (
     <>
       <Head>

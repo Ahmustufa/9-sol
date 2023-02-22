@@ -4,7 +4,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import PaymentStatus from '@/components/payment/PaymentStatus';
 const stripe = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`);
 
-function status() {
+function Status() {
   return (
     <Elements stripe={stripe}>
       <PaymentStatus/>
@@ -12,4 +12,4 @@ function status() {
   )
 }
 
-export default status
+export default Status

@@ -10,6 +10,7 @@ margin: 50px 0px;
     line-height: 1.1em;
     font-size: 36px;
     width: max-content;
+    font-family: 'Poppins', sans-serif;
   }
   @media (max-width: 767px) {
     h1 {

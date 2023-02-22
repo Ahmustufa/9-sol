@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 const Layout = (props) => {
   return (
-    <div style={{overflowX: "hidden"}}>
+    <div style={{ overflowX: "hidden" }}>
       <Navbar />
       {props.children}
       <Footer />

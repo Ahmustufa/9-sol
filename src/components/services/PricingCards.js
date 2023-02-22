@@ -29,18 +29,18 @@ const Pricing = (props) => {
   const solutionTypeChange = (type) => {
     setSolution(type);
   };
-const router = useRouter()
-  const handleCheckout = (data)=>{
-    if(data._id){
+  const router = useRouter();
+  const handleCheckout = (data) => {
+    if (data._id) {
       console.log("id", data);
       // router.push(`/checkout/${id}`)
       router.push({
         pathname: `/checkout/${data._id}`,
-        query: {value: data},
-        // state: data
-      })
+        query: { data: JSON.stringify(data) },
+        // state: data, 
+      });
     }
-  }
+  };
   useEffect(() => {
     dispatch(getPackages());
   }, []);
@@ -78,8 +78,9 @@ const router = useRouter()
           columnGap={2}
           rowGap={5}
         >
-          {
-             packageData? packageData.filter((item) => item.subtitle === solution)
+          {packageData
+            ? packageData
+                .filter((item) => item.subtitle === solution)
                 .map((val, index) => {
                   return (
                     <Cards
@@ -165,7 +166,10 @@ const router = useRouter()
                           className="px-2 flex justify-center"
                           // href="mailto:management@9solutions.com"
                         >
-                          <BlackButton style={{ width: "100%" }} onClick={()=>handleCheckout(val)}>
+                          <BlackButton
+                            style={{ width: "100%" }}
+                            onClick={() => handleCheckout(val)}
+                          >
                             Get Started
                           </BlackButton>
                         </div>
@@ -185,7 +189,7 @@ const router = useRouter()
                     </Cards>
                   );
                 })
-          : ""}
+            : ""}
         </Row>
       </Grid>
     </Grid>
