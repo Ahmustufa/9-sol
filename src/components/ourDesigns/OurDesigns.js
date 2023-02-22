@@ -129,13 +129,6 @@ const OurDesigns = (props) => {
   const router = useRouter();
   return (
     <>
-      <Modal onOpen={modalState.visible} onClose={closeModal}>
-        <Box>
-          {/* sadsa */}
-          {/* <Image alt="img" src={modalState.imgSrc}  /> */}
-        </Box>
-      </Modal>
-
       <StyledSection className="container-fluid">
         <Fade direction="up" duration={1300} triggerOnce cascade damping={0.2}>
           <Heading
@@ -163,7 +156,7 @@ const OurDesigns = (props) => {
           </div>
         ) : null}
 
-        <div className="products-wrapper col-xl-10 col-lg-10 col-md-10 col-sm-11 col-12 col-12 p-0 mx-auto">
+        <div className="products-wrapper ">
           {/**
            * Options for logo items
            */}
@@ -193,7 +186,7 @@ const OurDesigns = (props) => {
             ))}
         </div>
 
-        <div className="design-cards-wrapper col-xl-10 col-lg-10 col-md-10 col-sm-11 col-12 col-12 p-0 mx-auto my-5">
+        <div className="design-cards-wrapper  my-5">
           {
             /**
              * Portfolio items for web

@@ -113,7 +113,7 @@ const PreviewCard = ({ image, link }) => {
           />
         </div>
         <Box display="flex" justifyContent="center" alignItems="center">
-          <img alt="img" src={image} />
+          <Image alt="img" src={image} width={1000} height={200} />
         </Box>
         <div style={{ backgroundColor: "#aa076b", padding: 10 }}>
         
@@ -127,6 +127,7 @@ const PreviewCard = ({ image, link }) => {
         <div class="fixed-container screen">
           {/* <img onLoad={onImgLoad} src={image} /> */}
           <Image
+          alt="showcaseImages"
             onLoad={onImgLoad}
             src={image}
             layout="fill"

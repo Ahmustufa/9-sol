@@ -5,9 +5,20 @@ import { useRouter } from "next/router";
 import SideBar from "@/components/form/SideBar";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store.js";
+import React, { useEffect } from "react";
+import HashLoader from "@/components/loader/HashLoader";
+import Router from "next/router";
 export default function App({ Component, pageProps }) {
+  // const [loading, setLoading] = React.useState(false);
   const router = useRouter();
-  
+  // useEffect(() => {
+  //   router.events.on("routeChangeStart", (url, { shallow }) => {
+  //     console.log(`routing to ${url}`, `is shallow routing: ${shallow}`);
+  //   });
+  // }, []);
+
+  // console.log("loading", loading);
+
   return (
     <>
       <Head>
@@ -122,6 +133,7 @@ s0.parentNode.insertBefore(s1,s0);
           />
         </noscript>
       </Head>
+
       <Provider store={store}>
         <Layout>
           <SideBar />
