@@ -18,7 +18,7 @@ const Intro = () => {
     // console.log(`Done after 5 loops!`);
   };
   return (
-    <Grid container p={3}>
+    <Grid container p={3} >
       <Grid item xs={12} xl={6} lg={6} md={6} sm={12}>
         <Stack spacing={2} display="flex">
           <Grid container>
@@ -224,7 +224,10 @@ const Intro = () => {
             className="image"
             src={require("/public/images/mobile/mobile3.webp")}
           />
-          <Image className="image" src={require("/public/images/mobile/mobile1.webp")} />
+          <Image
+            className="image"
+            src={require("/public/images/mobile/mobile1.webp")}
+          />
         </Div>
       </Grid>
     </Grid>
@@ -234,17 +237,17 @@ const Intro = () => {
 export default Intro;
 
 const Div = styled.div`
-display: flex;
-/* justify-content: end; */
-width: fit-content;
-@media (max-width: 1186px) {
-  .image{
-    width: 250px;
+  display: flex;
+  /* justify-content: end; */
+  width: fit-content;
+  @media (max-width: 1186px) {
+    .image {
+      width: 250px;
+    }
   }
-}
-@media (max-width: 984px) {
-  .image{
-    width: 200px;
+  @media (max-width: 984px) {
+    .image {
+      width: 200px;
+    }
   }
-}
 `;

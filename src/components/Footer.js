@@ -79,9 +79,9 @@ const Footer = () => {
           item
           xl={4}
           lg={4}
-          md={6}
-          sm={10}
-          xs={10}
+          md={5}
+          sm={8}
+          xs={8}
           sx={{ display: { sm: { justifyContent: "center" } } }}
         >
           {/* <Box> */}
@@ -111,14 +111,14 @@ const Footer = () => {
               <a
                 className="text-white px-2"
                 href="mailto:management@9solutions.com"
-                style={{ whiteSpace: "wrap" }}
+                style={{ display: "block" }}
               >
                 management@9solutions.com
               </a>
             </div>
           </Stack>
         </Grid>
-        <Grid item xl={2} lg={2} md={6} sm={4} xs={6}>
+        <Grid item xl={2} lg={2} md={3} sm={3} xs={6}>
           <Box display="flex">
             <Text variant="h6" className="text-white mb-2 text-center p-5">
               Menu
@@ -135,21 +135,26 @@ const Footer = () => {
             ))}
           </Stack>
         </Grid>
-        {/* <Grid item xs="auto">
-          <Text color="white">
+        <Grid
+          item
+          xl={4}
+          lg={4}
+          md={4}
+          sm={12}
+          display="flex"
+          alignItems="center"
+        >
+          <Text color="white" letterSpacing={2} textAlign="center" p={2}>
             At 9Solutiions, we're passionate about delivering innovative and
             high-quality web and mobile development solutions. Our team of
             expert developers works tirelessly to bring your vision to life and
-            create products that stand out in the digital landscape. If you're
-            interested in working with us or learning more about our services,
-            feel free to get in touch with us via the contact information below.
-            We'd love to hear from you!
+            create products that stand out in the digital landscape.
           </Text>
-        </Grid> */}
+        </Grid>
         <Grid
           item
-          xl={6}
-          lg={6}
+          xl={2}
+          lg={2}
           sx={{
             display: {
               xl: "flex",
@@ -186,13 +191,16 @@ const Footer = () => {
           </p>
         </Grid>
         <Grid item xl={2} lg={6} md={6} sm={12} xs={12} className="second-col">
-          <a href="https://www.2checkout.com/homepage/" target="_blank">
+          <a
+            // href="https://www.2checkout.com/homepage/"
+            target="_blank"
+          >
             <img alt="2-checkout" src={"/images/paymentlogosvertical.png"} />{" "}
           </a>
         </Grid>
         <Grid item xl={2} lg={2} md={6} sm={12} xs={12} className="second-col">
           <a
-            href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"
+            // href="//www.dmca.com/Protection/Status.aspx?ID=6244df18-9499-4810-aca9-fad933a24c48"
             title="DMCA.com Protection Status"
             class="dmca-badge"
             target="_blank"
@@ -203,10 +211,7 @@ const Footer = () => {
               src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=d4ee90ff-deaf-47d3-a628-7291ed33ec8f"
               alt="DMCA.com Protection Status"
             />
-          </a>{" "}
-          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
-            {" "}
-          </script>
+          </a>
         </Grid>
       </Grid>
     </FooterContent2Div>

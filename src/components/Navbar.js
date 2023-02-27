@@ -76,7 +76,7 @@ function ResponsiveAppBar() {
               }}
             >
               {items.map((page, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu} >
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <div style={{ paddingRight: 10 }}>{page.icon}</div>
                   <Link
                     className="text-xl font-bold transition duration-150 border-b-2 border-transparent hover:border-magenta"
@@ -109,14 +109,14 @@ function ResponsiveAppBar() {
             }}
           >
           </Text> */}
-          <Box sx={{display: {xl: "none", lg: "none",}}}>
-          <Link href="/">
-            <Image
-              src={require('/public/favicon.png')}
-              width={250}
-              height={0}
-            />
-          </Link>
+          <Box sx={{ display: { xl: "none", lg: "none" } }}>
+            <Link href="/">
+              <Image
+                src={require("/public/favicon.png")}
+                width={250}
+                height={0}
+              />
+            </Link>
           </Box>
           <Box
             sx={{
