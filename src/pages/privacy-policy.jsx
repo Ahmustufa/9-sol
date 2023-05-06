@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
               communication. You can also call us at
               <span style={{ fontWeight: 700 }}>
                 {" "}
-                <a href="tel:+16506819645"> +1(650)-681-9645 </a>
+                <a href="tel:+13478538850"> (347) 853-8850 </a>
               </span>
               for further information in this regard.
             </li>
@@ -277,7 +277,7 @@ const PrivacyPolicy = () => {
             If you have any queries or concerns check our Privacy Policy or use
             of your information, feel free to call us on our toll free number:{" "}
             <span style={{ fontWeight: 700 }}>
-              <a href="tel:+16506819645">+1(650)-681-9645</a>
+              <a href="tel:+13478538850">(347) 853-8850</a>
             </span>
             . You can email us or simple click on the live chat option available
             on our

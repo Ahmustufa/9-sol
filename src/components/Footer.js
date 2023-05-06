@@ -95,8 +95,8 @@ const Footer = () => {
           <Stack spacing={2}>
             <div className="flex  items-center">
               <PhoneIcon sx={{ fontSize: "20px", color: "white" }} />
-              <a className="text-white px-2" href="tel:+16506819645">
-                +1-(650) 681-9645
+              <a className="text-white px-2" href="tel:+13478538850">
+                (347) 853-8850
               </a>
             </div>
             <div className="flex items-center">

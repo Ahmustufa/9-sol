@@ -88,22 +88,28 @@ const ContactInfo = (props) => {
           </Heading>
         </h1>
         <p style={{ marginBottom: 50 }}>
-          We are available round-the-clock, ensuring that none of your queries are left
-          unanswered. <br />
-          Give us a call today and we'll assist you in turning your idea into a ravishing
-          reality.
+          We are available round-the-clock, ensuring that none of your queries
+          are left unanswered. <br />
+          Give us a call today and we'll assist you in turning your idea into a
+          ravishing reality.
         </p>
       </Fade>
       <Grid container className="row">
-        <Grid item  xs={6} className="col">
+        <Grid item xs={6} className="col">
           <Bounce triggerOnce duration={1300}>
-            <img alt="toll-free" src={tollFreeImg} style={{ height: 50, width: 50 }} />
+            <img
+              alt="toll-free"
+              src={tollFreeImg}
+              style={{ height: 50, width: 50 }}
+            />
           </Bounce>
           <div style={{ padding: "0px 12px" }}>
             <Fade triggerOnce cascade>
               <h6>Toll Free</h6>
               <h6>
-                <a href="tel:+16506819645" className="h-text">+1 (650) 681-9645</a>
+                <a href="tel:+13478538850" className="h-text">
+                  (347) 853-8850
+                </a>
               </h6>
             </Fade>
           </div>
@@ -121,7 +127,9 @@ const ContactInfo = (props) => {
             <Fade triggerOnce cascade>
               <h6>Request</h6>
               <h5>
-                <a href="tel:+16506819645" className="h-text">Call Back</a>
+                <a href="tel:+13478538850" className="h-text">
+                  Call Back
+                </a>
               </h5>
             </Fade>
           </div>

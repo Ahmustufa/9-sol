@@ -157,7 +157,7 @@ const TermOfUse = () => {
           <ul>
             <li>
               Call Customer support at{" "}
-              <Link href="tel:+16506819645">+1(650)-681-9645</Link>
+              <Link href="tel:+13478538850">(347) 853-8850</Link>
             </li>
             <li>
               Live Chat.

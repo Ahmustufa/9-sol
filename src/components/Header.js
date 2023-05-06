@@ -34,15 +34,14 @@ const Header = () => {
             borderRadius: "20px",
           }}
         >
-         
           {/* <div style={{position: "absolute", right: 710, top: 200, background: "white", borderRadius: 20}}> */}
           {/* </div> */}
           <ContactForm
-          handleClose={handleClose}
-          color="#aa076b"
-          text="| We Are Here To Help"
-          subtext="Talk To Us Now To Avail Amazing Discounts"
-          // text="Chat with us to Avail 50% off"
+            handleClose={handleClose}
+            color="#aa076b"
+            text="| We Are Here To Help"
+            subtext="Talk To Us Now To Avail Amazing Discounts"
+            // text="Chat with us to Avail 50% off"
           />
         </Box>
       </Modal>
@@ -79,8 +78,8 @@ const Header = () => {
             width={45}
             height={100}
           />
-          <a className="text-white px-4" href="tel:+16506819645">
-            +1-(650) 681-9645
+          <a className="text-white px-4" href="tel:+13478538850">
+            (347) 853-8850
           </a>
         </Grid>
         {/* <Grid item xs={1} className="flex justify-end items-center">
