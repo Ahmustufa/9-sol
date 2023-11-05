@@ -33,14 +33,11 @@ function Error() {
         <Grid container>
           <Grid xs={12} display="flex" justifyContent="center">
             <LinearButton style={{ padding: 10 }}>
-              <Link href="/" >
-                Back Home
-              </Link>
+              <Link href="/">Back to home page</Link>
             </LinearButton>
           </Grid>
         </Grid>
       </Container>
-     
     </Box>
   );
 }
