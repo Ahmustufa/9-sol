@@ -8,19 +8,19 @@ import { store } from "@/redux/store.js";
 import React, { useEffect } from "react";
 import HashLoader from "@/components/loader/HashLoader";
 import Router from "next/router";
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css'; 
-import '../styles/Nprogress.css'
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+import "../styles/Nprogress.css";
 
-NProgress.configure({ showSpinner: false })
+NProgress.configure({ showSpinner: false });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    Router.events.on('routeChangeStart', () => NProgress.start()); 
-    Router.events.on('routeChangeComplete', () => NProgress.done()); 
-    Router.events.on('routeChangeError', () => NProgress.done());
+    Router.events.on("routeChangeStart", () => NProgress.start());
+    Router.events.on("routeChangeComplete", () => NProgress.done());
+    Router.events.on("routeChangeError", () => NProgress.done());
   }, []);
 
   return (
@@ -110,7 +110,7 @@ s0.parentNode.insertBefore(s1,s0);
 
   gtag('config', 'G-MDE9VVJHKV');
 </script> */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `!function(q,e,v,n,t,s){if(q.qp) return; 
               n=q.qp=function(){
@@ -127,15 +127,15 @@ s0.parentNode.insertBefore(s1,s0);
             qp('init', '9b8a8c9e206c4f698c5726ec04b13148');
             qp('track', 'ViewContent');`,
           }}
-        ></script>
-        <noscript>
+        ></script> */}
+        {/* <noscript>
           <img
             height={1}
             width={1}
             style={{ display: "none" }}
             src="https://q.quora.com/_/ad/9b8a8c9e206c4f698c5726ec04b13148/pixel?tag=ViewContent&noscript=1"
           />
-        </noscript>
+        </noscript> */}
       </Head>
 
       <Provider store={store}>
