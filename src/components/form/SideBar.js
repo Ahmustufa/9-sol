@@ -139,6 +139,7 @@ const SideBar = () => {
         if (res.status === 200) {
           setInitState({ ...initState, loading: false, success: true });
           setToast({ ...toast, open: true });
+          toggleSidebar(false);
         } else {
           setLoading(false);
         }
@@ -310,11 +311,11 @@ const SideBar = () => {
                 />
               )}
             />
-            <GoogleReCaptchaProvider
+            {/* <GoogleReCaptchaProvider
               reCaptchaKey={process.env.RCAPTCHA_SITE_KEY}
             >
               <GoogleReCaptcha />
-            </GoogleReCaptchaProvider>
+            </GoogleReCaptchaProvider> */}
             {!initState?.loading ? (
               <BlackButton
                 onClick={handleSubmit(onSubmit)}

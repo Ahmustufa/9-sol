@@ -235,12 +235,12 @@ const OurDesigns = (props) => {
              */
             type === "logo" && (
               <Grid container justifyContent="center" alignItems="center">
-                {page.map((item) => {
+                {page.map((item, index) => {
                   const num = Math.floor(item / 4);
                   const top = num * 298 + "px";
                   const left = (item % 4) * 233 + "px";
                   return (
-                    <Grid item>
+                    <Grid item key={index}>
                       <Zoom cascade duration={200}>
                         <div
                           className="sprite-image"
@@ -334,12 +334,12 @@ const OurDesigns = (props) => {
              */
             type === "promo" && (
               <Grid container justifyContent="center" alignItems="center">
-                {page.map((item) => {
+                {page.map((item, index) => {
                   const num = Math.floor(item / 3);
                   const top = num * 298 + "px";
                   const left = (item % 3) * 233 + "px";
                   return (
-                    <Grid item>
+                    <Grid item key={index}>
                       <Zoom cascade duration={200}>
                         <div
                           className="sprite-image"
@@ -362,13 +362,13 @@ const OurDesigns = (props) => {
              */
             type === "all" && (
               <Grid container justifyContent="center" alignItems="center">
-                {page.map((item) => {
+                {page.map((item, index) => {
                   const { left, top, type, imageSrc, modalSrc } =
                     allItems[item];
 
                   if (type === 1 || type === 3) {
                     return (
-                      <Grid item>
+                      <Grid item key={index}>
                         <Zoom cascade duration={200}>
                           <div
                             className="sprite-image"

@@ -125,8 +125,11 @@ const Footer = () => {
             </Text>
           </Box>
           <Stack spacing={2}>
-            {items.map((item) => (
-              <div style={{ display: "flex", alignItems: "center" }}>
+            {items.map((item, index) => (
+              <div
+                style={{ display: "flex", alignItems: "center" }}
+                key={index}
+              >
                 <Bounce style={{ paddingRight: "20px" }}>
                   <RxDoubleArrowRight color="white" />
                 </Bounce>

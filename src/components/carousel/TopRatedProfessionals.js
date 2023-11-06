@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Heading from "../Title/Heading";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
   awardsAndRecognition1,
@@ -19,6 +19,7 @@ import {
   topRated4,
   topRated5,
 } from "/public/index.js";
+import Image from "next/image";
 
 const StyledDiv = styled.div`
   background-color: #fff;
@@ -175,7 +176,7 @@ const TopRatedProfessionals = (props) => {
         {props.type == "awardsAndRecognition"
           ? awardsAndRecognitionArray.map((data, index) => {
               return (
-                <div className="slider-div">
+                <div className="slider-div" key={index}>
                   <div
                     style={{
                       backgroundColor: "#e9e9e9",
@@ -195,7 +196,7 @@ const TopRatedProfessionals = (props) => {
             })
           : topRatedProfessionalArray.map((data, index) => {
               return (
-                <div className="slider-div">
+                <div className="slider-div" key={index}>
                   <img src={data.image} alt="img" />
                 </div>
               );

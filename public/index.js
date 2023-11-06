@@ -16,7 +16,7 @@ export const awardsAndRecognition7 =
   "./images/certifications/Awards_Recognitions_7.png";
 export const awardsAndRecognition8 =
   "./images/certifications/Awards_Recognitions_8.png";
-export const topRated1 = "./images/certifications/topRated1.png";
+export const topRated1 = "/images/certifications/topRated1.png";
 export const topRated2 = "./images/certifications/topRated2.png";
 export const topRated3 = "./images/certifications/topRated3.png";
 export const topRated4 = "./images/certifications/topRated4.svg";

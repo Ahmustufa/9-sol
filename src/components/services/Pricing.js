@@ -74,6 +74,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -142,9 +143,9 @@ const Pricing = (props) => {
                               // overflowY: "auto",
                             }}
                           >
-                            {val.items.map((item) => {
+                            {val.items.map((item, index) => {
                               return (
-                                <Container maxWidth="lg">
+                                <Container maxWidth="lg" key={index}>
                                   <Service>
                                     <CheckCircleIcon
                                       style={{
@@ -194,6 +195,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -248,9 +250,9 @@ const Pricing = (props) => {
                               // overflowY: "auto",
                             }}
                           >
-                            {val.items.map((item) => {
+                            {val.items.map((item, index) => {
                               return (
-                                <Container maxWidth="lg">
+                                <Container maxWidth="lg" key={index}>
                                   <Service>
                                     <CheckCircleIcon
                                       style={{
@@ -300,6 +302,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -354,9 +357,9 @@ const Pricing = (props) => {
                               // overflowY: "auto",
                             }}
                           >
-                            {val.items.map((item) => {
+                            {val.items.map((item, index) => {
                               return (
-                                <Container maxWidth="lg">
+                                <Container maxWidth="lg" key={index}>
                                   <Service>
                                     <CheckCircleIcon
                                       style={{
@@ -406,6 +409,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={index}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -462,7 +466,7 @@ const Pricing = (props) => {
                           >
                             {val.items.map((item) => {
                               return (
-                                <Container maxWidth="lg">
+                                <Container maxWidth="lg" key={item}>
                                   <Service>
                                     <CheckCircleIcon
                                       style={{
@@ -512,6 +516,7 @@ const Pricing = (props) => {
                   return (
                     <Cards
                       item
+                      key={val}
                       xs={7}
                       xl={2.5}
                       lg={3.5}
@@ -568,7 +573,7 @@ const Pricing = (props) => {
                           >
                             {val.items.map((item) => {
                               return (
-                                <Container maxWidth="lg">
+                                <Container maxWidth="lg" key={item}>
                                   <Service>
                                     <CheckCircleIcon
                                       style={{
@@ -659,9 +664,8 @@ const Row = styled(Grid)`
   /* align-items: center; */
   justify-content: center;
   @media (max-width: 594px) {
-    margin-left: -18px !important;    
+    margin-left: -18px !important;
   }
-
 `;
 const Service = styled.div`
   display: flex;

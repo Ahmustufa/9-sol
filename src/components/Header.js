@@ -37,7 +37,7 @@ const Header = () => {
           {/* <div style={{position: "absolute", right: 710, top: 200, background: "white", borderRadius: 20}}> */}
           {/* </div> */}
           <ContactForm
-            handleClose={handleClose}
+            handleModalClose={handleClose}
             color="#aa076b"
             text="| We Are Here To Help"
             subtext="Talk To Us Now To Avail Amazing Discounts"

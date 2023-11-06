@@ -45,6 +45,7 @@ const ContactForm = (props) => {
         if (res.status === 200) {
           setInitState({ ...initState, loading: false, success: true });
           setToast({ ...toast, open: true });
+          props.handleModalClose();
         } else {
           setLoading(false);
         }
@@ -92,7 +93,10 @@ const ContactForm = (props) => {
               marginLeft: "auto",
             }}
           >
-            <CancelIcon style={{ fontSize: "35px" }} onClick={props.handleClose} />
+            <CancelIcon
+              style={{ fontSize: "35px" }}
+              onClick={props.handleClose}
+            />
           </span>
           <Text fontWeight="bold" fontSize={24} color={props.color}>
             {props.text}

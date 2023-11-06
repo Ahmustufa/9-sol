@@ -325,7 +325,7 @@ const Process = ({ type, size }) => {
         {steps.map((item, index) => (
           <>
             {index == value && (
-              <>
+              <React.Fragment key={index}>
                 <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
                   <Fade triggerOnce duration={1300} damping={0.2}>
                     <div className="above-slider-div">
@@ -349,7 +349,7 @@ const Process = ({ type, size }) => {
                     <img alt="process-img" src={steps[index].image} />
                   </Zoom>
                 </Grid>
-              </>
+              </React.Fragment>
             )}
           </>
         ))}

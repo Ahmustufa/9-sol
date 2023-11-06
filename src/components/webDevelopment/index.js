@@ -321,6 +321,7 @@ const WebDevelopement = (props) => {
               return (
                 <Grid
                   container
+                  key={index}
                   style={{
                     flexDirection: index % 2 == 0 ? "initial" : "row-reverse",
                   }}
@@ -364,6 +365,7 @@ const WebDevelopement = (props) => {
               return (
                 <Grid
                   container
+                  key={index}
                   style={{
                     flexDirection: index % 2 == 0 ? "initial" : "row-reverse",
                   }}

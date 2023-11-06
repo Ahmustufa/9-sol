@@ -312,7 +312,7 @@ const WebSolutions = () => {
             <div className="twoLineList">
               <ul style={{ listStyle: "outside" }}>
                 {solutions[solution].list.map((listItem) => (
-                  <li>{`${listItem}`}</li>
+                  <li key={listItem}>{`${listItem}`}</li>
                 ))}
               </ul>
             </div>
