@@ -266,7 +266,7 @@ const additionalServicesArray = [
       "Creating a 'Software as a Service' or SaaS product isn't an easy process.",
     para: (
       <>
-        "Blockchain" has already established itself as status quo for creating a
+        Blockchain has already established itself as status quo for creating a
         distributed consensus in the digital online world. Companies around the
         globe are pursuing to adopt Blockchain to create innovative business
         models to overtake the competition. We can help you adopt to the

@@ -167,8 +167,9 @@ const steps = [
           <li>Work-plan Milestones Delivery Schedule</li>
           <li>Software Test Plan document</li>
         </ul>
-        With the outcome of this phase 9solutions and Client's expectations are
-        matched for the outcome of the Development phase.
+        {
+          "With the outcome of this phase 9solutions and Client's expectations are matched for the outcome of the Development phase."
+        }
       </>
     ),
     image: process3,

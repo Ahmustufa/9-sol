@@ -148,8 +148,8 @@ const Footer = () => {
           alignItems="center"
         >
           <Text color="white" letterSpacing={2} textAlign="center" p={2}>
-            At 9Solutiions, we're passionate about delivering innovative and
-            high-quality web and mobile development solutions. Our team of
+            At 9Solutiions, we&apos;re passionate about delivering innovative
+            and high-quality web and mobile development solutions. Our team of
             expert developers works tirelessly to bring your vision to life and
             create products that stand out in the digital landscape.
           </Text>

@@ -18,7 +18,7 @@ const Intro = () => {
     // console.log(`Done after 5 loops!`);
   };
   return (
-    <Grid container p={3} >
+    <Grid container p={3}>
       <Grid item xs={12} xl={6} lg={6} md={6} sm={12}>
         <Stack spacing={2} display="flex">
           <Grid container>
@@ -81,10 +81,10 @@ const Intro = () => {
               className="flex justify-center"
             >
               <Text fontSize={18} className="break-words">
-                Making a mark in today's online world is a crucial element of
-                marketing. Since the world has started to enjoy better results
-                of digital marketing methods, traditional marketing methods are
-                quickly losing popularity.
+                Making a mark in today&apos;s online world is a crucial element
+                of marketing. Since the world has started to enjoy better
+                results of digital marketing methods, traditional marketing
+                methods are quickly losing popularity.
               </Text>
             </Grid>
           </Grid>

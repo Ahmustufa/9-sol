@@ -27,7 +27,9 @@ function Error() {
         </Grid>
         <Grid container>
           <Grid xs={12} display="flex" justifyContent="center" mb={4} item>
-            <Text variant="h4">The page you're looking for doesn't exist.</Text>
+            <Text variant="h4">
+              {"The page you're looking for doesn't exist."}
+            </Text>
           </Grid>
         </Grid>
         <Grid container>

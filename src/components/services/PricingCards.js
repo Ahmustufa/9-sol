@@ -10,11 +10,12 @@ import Heading from "../Title/Heading";
 // import { connect, useDispatch } from "react-redux";
 // import { storeLogoDesignOrderData } from "../../redux/actions";
 // import { ModalConstant } from "../../redux/constants";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 // import { useSelector } from "react-redux";
 import MultiSwitchWrapper from "../inputs/MultiSwitchWrapper";
 // import ContactInfo from "../contactInfo";
-import { Grid } from "@mui/material";
+import { Badge, Grid } from "@mui/material";
+import ContactInfo from "../contactinfo";
 
 const StyledDiv = styled.div`
   background-color: #fff;
@@ -149,16 +150,16 @@ const options = [
 ];
 
 const Packages = (props) => {
-    const router = useRouter();
-    //   const dispatch = useDispatch();
-    //   const isUserLoggedIn = useSelector((state) => state.user.isLoggedIn);
-    const { type } = props;
-    const [solution, setSolution] = useState("webPackage");
-    
-    const solutionTypeChange = (type) => {
-      setSolution(type);
-    };
-    
+  const router = useRouter();
+  //   const dispatch = useDispatch();
+  //   const isUserLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  const { type } = props;
+  const [solution, setSolution] = useState("webPackage");
+
+  const solutionTypeChange = (type) => {
+    setSolution(type);
+  };
+
   useEffect(() => {
     if (type === "logo") {
       setSolution("logoPackage");
@@ -168,14 +169,14 @@ const Packages = (props) => {
     }
   }, []);
 
-//   useQuery(Query.GET_ALL_PACKAGE, {
-//     onCompleted: (data) => {
-//       props.storeAllPackage({ allPackages: data.getAllPackages });
-//     },
-//     onError: (err) => {
-//       message.error(errorHandler(err));
-//     },
-//   });
+  //   useQuery(Query.GET_ALL_PACKAGE, {
+  //     onCompleted: (data) => {
+  //       props.storeAllPackage({ allPackages: data.getAllPackages });
+  //     },
+  //     onError: (err) => {
+  //       message.error(errorHandler(err));
+  //     },
+  //   });
 
   const setOrderType = (data) => {
     // packageType: 1,  bronze = 1, gold = 2, platium = 3
@@ -214,12 +215,16 @@ const Packages = (props) => {
       <StyledDiv>
         <Heading
           title={
-            <>Our packages are cost-effective and suit every business size and needs</>
+            <>
+              Our packages are cost-effective and suit every business size and
+              needs
+            </>
           }
         />
         <p style={{ marginBottom: 28 }}>
-          It doesn't matter if you're running an SME or an enterprise, our service
-          packages are certain to suit your budget and needs.
+          {
+            "It doesn't matter if you're running an SME or an enterprise, our service packages are certain to suit your budget and needs."
+          }
         </p>
 
         <MultiSwitchWrapper options={options} onChange={solutionTypeChange} />
@@ -231,19 +236,20 @@ const Packages = (props) => {
             {props[solution]?.map((data, index) => (
               <>
                 <Grid
-                item
+                  item
                   key={data._id}
-                //   xxl={8}
-                //   xl={8}
-                //   lg={8}
-                //   md={12}
-                //   sm={24}
-                //   xs={24}
-                //   span={8}
+                  //   xxl={8}
+                  //   xl={8}
+                  //   lg={8}
+                  //   md={12}
+                  //   sm={24}
+                  //   xs={24}
+                  //   span={8}
                 >
                   <div
                     style={{
-                      padding: index == 1 ? "0px 6px 16px 6px" : "24px 6px 16px 6px",
+                      padding:
+                        index == 1 ? "0px 6px 16px 6px" : "24px 6px 16px 6px",
                       transform: index == 1 ? "scale(1.08)" : "scale(1)",
                       border: index == 1 ? "1px solid #0b4c8c" : "auto",
                     }}
@@ -295,7 +301,9 @@ const Packages = (props) => {
                           color: index == 1 ? "#0b4c8c" : "",
                         }}
                       >
-                        <span style={{ fontSize: 32, float: "left", marginTop: 6 }}>
+                        <span
+                          style={{ fontSize: 32, float: "left", marginTop: 6 }}
+                        >
                           $
                         </span>
                         {data.price}

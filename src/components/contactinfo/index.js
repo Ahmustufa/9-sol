@@ -90,8 +90,8 @@ const ContactInfo = (props) => {
         <p style={{ marginBottom: 50 }}>
           We are available round-the-clock, ensuring that none of your queries
           are left unanswered. <br />
-          Give us a call today and we'll assist you in turning your idea into a
-          ravishing reality.
+          Give us a call today and we&apos;ll assist you in turning your idea
+          into a ravishing reality.
         </p>
       </Fade>
       <Grid container className="row">
