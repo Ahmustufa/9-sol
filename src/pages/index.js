@@ -52,7 +52,8 @@ export async function getServerSideProps(context) {
     props: {
       metaData: {
         title:
-          "Custom Mobile App Development Agency &amp; Mobile Application Design Services in USA | Mobile Application Development Company",
+          // "Custom Mobile App Development Agency &amp; Mobile Application Design Services in USA | Mobile Application Development Company",
+          "Custom Mobile App Development Agency | 9Solutions",
         description:
           "9solutions is a mobile app and software development company elevating local businesses through top-notch strategy and design.",
         keywords:

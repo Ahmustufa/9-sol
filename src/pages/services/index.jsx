@@ -50,7 +50,7 @@ export async function getServerSideProps(context) {
     props: {
       metaData: {
         title:
-          "Mobile App Development, Startup MVP and prototyping, Blockchain Development",
+          "Mobile App Development, Startup MVP and prototyping, Blockchain Development | 9Solutions",
         description:
           "Services offered of Mobile App Development, Startup MVP and prototyping, Blockchain Development.",
         keywords:

@@ -249,7 +249,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-              <Process />
+        <Process />
       </StyledDiv>
     </>
   );
@@ -261,7 +261,8 @@ export async function getServerSideProps(context) {
   return {
     props: {
       metaData: {
-        title: "A Complete Overview Of 9solutions",
+        // title: "A Complete Overview Of 9solutions",
+        title: "Our Journey | 9Solutions",
         description:
           "All About 9solutions | Integrity | Client Satisfaction | Quality",
         keywords: "A Complete Overview Of 9solutions",

@@ -274,7 +274,13 @@ const ContactUs = () => {
             </p>
           </h1>
         </section>
-        <ParentGrid container display="flex" justifyContent="center" mt={4} mb={12}>
+        <ParentGrid
+          container
+          display="flex"
+          justifyContent="center"
+          mt={4}
+          mb={12}
+        >
           <Grid item xl={4} lg={5} md={6} sm={8} xs={10}>
             <Box
               onSubmit={handleSubmit(onSubmit)}
@@ -405,15 +411,17 @@ export async function getServerSideProps(context) {
   return {
     props: {
       metaData: {
-        title: "Contact us E-commerce | Website Design and Development Company",
+        title:
+          "Contact us E-commerce | Website Design and Development Company | 9Solutions",
         description:
           "Call Us 24/7 (650)-681-9645. Fill the form to receive a guaranteed response within 24 hours. We are extremely satisfied in assisting you. Book us now!",
-        keywords: "Contact us E-commerce | Website Design and Development Company",
+        keywords:
+          "Contact us E-commerce | Website Design and Development Company",
         publishTime: new Date().toISOString(),
       },
     },
   };
-}   
+}
 
 const Input = styled(TextField)`
   /* width: 50%; */
@@ -439,4 +447,3 @@ const PhoneField = styled(PhoneInput)`
   border-radius: 5px;
   border: 1px solid grey;
 `;
-
